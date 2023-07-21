@@ -1,0 +1,228 @@
+.verified-wrapper{
+ position:fixed;
+ right:25vw;
+ top:10vh;
+ z-index: 70;
+ min-width:45%;
+ height:500px;
+ border-radius: 30px;
+ display:flex;
+ justify-content: center;
+ padding:5px;
+ font-family: 'poppins';
+ box-shadow: 0 0 5px var(--twitter-primaryfont);
+ background-color: white;
+ padding-bottom: 20px;
+}
+.verified-container{
+ padding-block: 15px;
+ display: flex;
+ justify-content: center;
+ width:80%;
+}
+.verified-content{
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: start;
+ width: 100%;
+ position: relative;
+}
+.cancel{
+ position:absolute;
+ top:-5px;
+ left:15px;
+}
+.verified-content>img{
+ width:40px;
+ height: 40px;
+}
+.verified-content>h2{
+ font-size: 25pt;
+}
+.verified-options{
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ width:90%;
+ height: 200px;
+ gap:1rem;
+ font-size: 10pt;
+}
+.verify-option{
+ display:flex;
+ align-items: center;
+ width:45%;
+ min-height: 130px;
+ max-height:150px;
+ background-color: white;
+ border-radius: 15px;
+ box-shadow: 0 0 8px var(--twitter-primaryfont);
+ padding:0 5px;
+ cursor: pointer;
+ font-size: 9pt;
+ border:solid 2px var(--twitter-super-light-gray)
+}
+.verify-option:hover{
+ border:solid 2px var(--twitter-blue);
+ background-color: var( --twitter-super-light-blue);
+}
+.option-content{
+ line-height: 10px;
+}
+.option-content>p{
+ line-height: 15px;
+}
+
+.subscribe{
+ width:85%;
+ height:50px;
+ margin-top: 20px;
+ background-color: var(--twitter-black);
+ border:none;
+ border-radius: 30px;
+ font-family: 'poppins';
+ padding-inline: 10px;
+ color:white
+}
+.verified-content>p{
+ margin-top: 20px;
+ font-size: 10pt;
+ text-align: center;
+}
+.verified-content>p>span{
+ color:var(--twitter-blue);
+ cursor: pointer;
+}
+.verified-content>p>span:hover{
+ color:var(--twitter-blue);
+ text-decoration: underline;
+}
+@media screen and (max-width:800px) {
+ .verified-wrapper{
+ position:fixed;
+ left:0;
+ min-width:100%;
+ top:0;
+ height:100vh;
+ z-index: 100;
+ border-radius: 0;
+ display:flex;
+ justify-content: center;
+ font-family: 'poppins';
+ box-shadow: 0;
+ background-color: white;
+}
+.verify-option{
+ display:flex;
+ align-items: center;
+ width:42%;
+ height:200px;
+ background-color: white;
+ border-radius: 15px;
+ box-shadow: 0 0 8px var(--twitter-primaryfont);
+ padding:0 10px;
+ cursor: pointer;
+}
+}
+/* TWEET */
+.tweet-wrapper{
+ position:fixed;
+ right:25vw;
+ top:10vh;
+ z-index:70;
+ min-width:47%;
+ max-width:300px;
+ height:auto;
+ border-radius: 30px;
+ display:flex;
+ justify-content: center;
+ padding:5px;
+ font-family: 'poppins';
+ box-shadow: 0 0 5px var(--twitter-primaryfont);
+ background-color: white;
+}
+.tweet-wrapper-x{
+ display:flex;
+ width: 95%;
+ margin-top: 50px;
+ background-color: white
+}
+.textarea-container{
+ display:flex;
+ flex-direction: column;
+ width: 85%;
+}
+.textarea-container>a{
+ border:solid 1px var(--twitter-extra-light-gray);
+ width:80px;
+ height: 20px;
+ font-size: 10pt;
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+ border-radius: 20px;
+ color: var(--twitter-blue);
+ padding-inline: 10px;
+ margin-bottom: 10px;
+ cursor:pointer
+}
+.textarea-container>a:hover{
+  color: var(--twitter-blue);
+}
+.textarea-container textarea{
+ height:auto;
+ min-height:100px;
+ resize: none;
+ outline: none;
+ border:none;
+ font-size: 15pt;
+}
+.tweet-privacy{
+ font-size: 10pt;
+ color:var(--twitter-blue);
+ font-weight: 600;
+ height: 35px;
+ border:none;
+ border-bottom: solid 1px var(--twitter-extra-light-gray);
+}
+.tweet-privacy>i{
+ margin-right: 10px;
+}
+.tweet-icons-button>div{
+ display:flex;
+ flex-direction: row;
+ width:100%
+}
+@media screen and (max-width:800px) {
+ .tweet-wrapper{
+ position:fixed;
+ left:0;
+ min-width:100%;
+ top:0;
+ height:100vh;
+ z-index: 60;
+ border-radius: 0;
+ display:flex;
+ justify-content: center;
+ font-family: 'poppins';
+ box-shadow: 0;
+ background-color: white;
+}
+}
+/* @media screen and (max-width:600px) {
+ .tweet-wrapper{
+ position:fixed;
+ left:0;
+ min-width:100%;
+ top:0;
+ height:100vh;
+ z-index: 60;
+ border-radius: 0;
+ display:flex;
+ justify-content: center;
+ font-family: 'poppins';
+ box-shadow: 0;
+ background-color: white;
+}
+} */

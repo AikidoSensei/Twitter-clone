@@ -1,0 +1,54 @@
+.blur-message{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.blur-message>p{
+ margin-right: 10px;
+}
+.messages-wrapper{
+ margin-top: 120px;
+ min-height: 100vh;
+}
+.top-messages{
+ display:flex;
+ justify-content: center;
+ align-items: center;
+
+}
+.search-bar-messages{
+  width:70%;
+ height:40px;
+ background-color: var(--twitter-super-light-gray);
+ border-radius: 30px;
+ display:flex;
+ align-items: center;
+ padding-inline:10px;
+ border:solid 1px var(--twitter-super-light-gray);
+}
+.search-bar-messages>input{
+  width:80%;
+ outline: none;
+ border: none;
+ background-color: transparent;
+ font-size: 12pt;
+}
+.search-bar-messages>i{
+ color:var(--twitter-primaryfont);
+ margin-right: 10px;
+}
+.search-bar-messages:focus-within{
+ border:solid 1px var(--twitter-blue);
+ background-color: white;
+}
+.search-bar-messages:focus-within i{
+ color: var(--twitter-blue);;
+}
+.blur-message>i{
+ margin-right: 20px;
+}
+@media screen and (max-width:600px) {
+.messages-wrapper{
+  min-width:100vw
+ }
+}

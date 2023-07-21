@@ -1,0 +1,21 @@
+.lists-wrapper{
+ display:flex;
+ flex-direction: column;
+ align-items: start;
+ margin-top: 50px;
+ height: 100vh;
+ font-size: 11pt;
+ font-family: 'poppins';
+ border:none;
+}
+
+.lists-content{
+ height:150px;
+ border:none;
+ border-bottom: solid 1px var(--twitter-extra-light-gray);
+ width:100%;
+}
+.lists-content>h2, .lists-content>p{
+ margin-left: 20px;
+}
+

@@ -1,0 +1,30 @@
+.avatar-container{
+ margin-right: 20px;
+}
+.search-bar{
+ width:70%;
+ height:40px;
+ background-color: yellow;
+ background-color: var(--twitter-super-light-gray);
+ border-radius: 30px;
+ display:flex;
+ align-items: center;
+ padding-inline:10px;
+ border:solid 1px var(--twitter-super-light-gray);
+}
+.search-bar>input{
+ width:90%;
+ outline: none;
+ border: none;
+ background-color: transparent;
+ font-size: 12pt;
+}
+.search-bar>i{
+ margin-right: 20px;
+}
+.center-trends{
+ background-color: white;
+ margin-top: 50px;
+ border-bottom: solid 1px var( --twitter-light-gray);
+ border-radius: 0;
+}

@@ -1,0 +1,119 @@
+.post__container{
+ width:100%;
+ display:flex;
+ flex-direction: column;
+ font-family: arial;
+ border:none;
+ border-bottom: solid 1px var(--twitter-extra-light-gray);
+ background-color: white;
+}
+.main-post{
+ width:100%;
+ display:flex;
+ justify-content: space-between;
+}
+a .post-ellipsis{
+ color:var(--twitter-light-black)
+}
+a .post-ellipsis:hover{
+ color:var(--twitter-blue)
+}
+.post__avatar{
+ width:45px;
+ height: 45px;
+ border-radius: 50%;
+ margin-left: 10px;
+ margin-top: 10px;
+ cursor:pointer
+}
+.post__content{
+ width:90%;
+ margin-left: 10px;
+}
+.post__title{
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+ width:100%;
+ margin-top: 10px;
+}
+.post__title>i{
+ margin-right: 10px;
+}
+.sbp__handle{
+ display:flex;
+ align-items: center;
+ height: 30px;
+ font-size: 10pt;
+}
+.post__body{
+ width:95%;
+
+}
+.post__text__content{
+ max-width:553px;
+}
+.media__container{
+ width:90%;
+ height:auto;
+ border-radius: 20px;
+ margin-top: 10px;
+}
+.post__interact__wrapper{
+ width:100%;
+ height:50px;
+ display:flex;
+ justify-content: center;
+}
+.post__interact__container{
+ width:65%;
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-right: 40px;
+}
+.post__interact__container .interact{
+ display:flex;
+ align-items: center;
+ font-size: 9pt;
+ color:var(--twitter-primaryfont);
+ cursor:pointer;
+}
+.post__interact__container a>i{
+ font-size: 12pt;
+}
+.comment-btn:hover .comment-i {
+ background-color: var(--twitter-light-blue);
+ color:var(--twitter-blue);
+}
+.comment-btn:hover{
+ color:var(--twitter-blue);
+}
+.retweet-btn:hover .retweet-i {
+ background-color: rgba(138, 235, 138, 0.196);
+ color:rgb(30, 175, 30);
+}
+.retweet-btn:hover{
+ color:rgb(30, 175, 30);
+}
+.heart-btn:hover .heart-i {
+ background-color: rgba(255, 0, 0, 0.139);
+ color:rgb(225, 53, 53);
+}
+.heart-btn:hover{
+ color:rgb(225, 53, 53);
+}
+.chart-btn:hover .chart-i {
+ background-color: var(--twitter-light-blue);
+ color:var(--twitter-blue);
+}
+.chart-btn:hover{
+ color:var(--twitter-blue);
+}
+.share-btn:hover .share-i{
+ background-color: var(--twitter-light-blue);
+ color:var(--twitter-blue);
+}
+.share-btn:hover{
+ color:var(--twitter-blue);
+}

@@ -1,0 +1,8 @@
+sideBar = 20
+mobile-sideBar = 
+mobile-navbar =
+verified = 70
+tweet = 70
+darkshade = 60
+Trend = 10
+home-center = 10

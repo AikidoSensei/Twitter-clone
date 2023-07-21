@@ -1,0 +1,37 @@
+.home-center-wrapper{
+ position:absolute;
+ z-index: 10;
+ padding:0;
+ top:0;
+ left:25.1%;
+ width:50%;
+ min-width: 400px;
+ border:none;
+ border-right:solid 1px var(--twitter-extra-light-gray);
+ margin-top: 0;
+}
+.home-center-container{
+ display: flex;
+ flex-direction: column;
+ gap:0;
+}
+.tweets-container{
+ margin-top: 120px;
+ width: 100%;
+}
+
+@media screen and (max-width:820px) {
+.home-center-wrapper{
+ width:60%;
+}
+}
+@media (max-width:600px) {
+ .home-center-wrapper{
+ position:static;
+ padding:0;
+ top:0;
+ left:0;
+ min-width: 100%;
+ z-index:10;
+ }
+}

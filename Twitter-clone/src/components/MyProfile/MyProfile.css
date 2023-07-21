@@ -1,0 +1,120 @@
+.profile-blur{
+ display:flex;
+ justify-content: left;
+ align-items: center;
+ height: 50px;
+ width:50%;
+ min-width: 400px;
+ backdrop-filter: blur(10px);
+ position: fixed;
+ top:0;
+ z-index: 10;
+ font-family: arial;
+ border:none;
+ border-bottom: solid 1px var(--twitter-extra-light-gray);
+ background-color:rgba(255, 255, 255, 0.617)
+}
+.profile-blur-detail{
+ line-height: 2px;
+ font-size: 12pt;
+}
+.profile-blur-detail>p{
+ font-size: 10pt;
+}
+@media (max-width:820px) {
+ .profile-blur{
+  min-width: 60%;
+ }
+}
+@media (max-width:600px) {
+ .profile-blur{
+  min-width: 100%;
+ }
+}
+.profile-media{
+ margin-top: 50px;
+ background-color: white;
+ height:230px;
+ position:relative
+}
+.banner{
+ width: 100%;
+ height: 150px;
+ object-fit: cover;
+}
+.profile-avatar{
+ position:absolute;
+ top:75px;
+ left:20px;
+ width: 130px;
+ height: 130px;
+ border-radius: 50%;
+ border: solid 5px white;
+}
+.edit-profile{
+ position:absolute;
+ right:20px;
+ bottom:30px;
+ width: 100px;
+ color:var(--twitter-black);
+ border: solid 1px var( --twitter-light-gray);
+ border-radius: 30px;
+ padding:4px 5px;
+ display:flex;
+ justify-content: center;
+ font-weight: 600;
+ font-family: 'Poppins';
+ cursor: pointer;
+}
+.edit-profile:hover{
+ color:var(--twitter-black)
+}
+.profile-body{
+ height: 190px;
+ padding-inline: 20px;
+ font-family: arial;
+ font-size: 11pt;
+ border:none;
+ border-bottom: solid 1px var(--twitter-extra-light-gray);
+}
+.twitter-handle{
+ line-height: 5px;
+}
+.twitter-handle>p{
+ color:var(--twitter-dark-gray)
+}
+.profile-body>p{
+ margin-top: 30px;
+}
+.location-joined{
+ margin-top: 10px;
+}
+.location-joined>span{
+ margin-right: 20px;
+}
+.location-joined i{
+ margin-right: 10px;
+ color: var(--twitter-primaryfont);
+ font-size: 10pt;
+}
+.profile-followers{
+ margin-top: 10px;
+}
+.profile-followers>span>span{
+ margin-left: 5px;
+ font-weight: 500;
+ color:var(--twitter-dark-gray)
+}
+.profile-followers>span{
+ margin-right: 10px;
+ color:var(--twitter-black);
+ font-weight: 700;
+}
+.profile-base{
+ height: 50px;
+ margin-top: 8px;
+ display:flex;
+ justify-content: center;
+ text-decoration: underline 4px var(--twitter-blue) ;
+ text-underline-offset: 15px;
+}

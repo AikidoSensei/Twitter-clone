@@ -1,0 +1,22 @@
+.notifications-wrapper{
+ display:flex;
+ justify-content: center;
+ margin-top: 100px;
+ background-color: white;
+ height: 100vh;
+ font-size: 12pt;
+ font-family: 'poppins';
+}
+.notifications-container{
+ padding-top: 50px;
+ line-height: 10px;
+ background-color: white;
+}
+.notifications-container>h2{
+ font-weight: 800;
+}
+@media screen and (max-width:600px) {
+ .notifications-wrapper{
+  min-width:100vw
+ }
+}

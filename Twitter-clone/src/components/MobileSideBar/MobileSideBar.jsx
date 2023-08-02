@@ -7,6 +7,20 @@ import { handleMobile } from '../../features/PopupSlice'
 import { NavLink } from 'react-router-dom'
 const MobileSideBar = () => {
 const {mobileSideBar} = useSelector(store=>store.popup)
+  const { myProfilePage } = useSelector(
+    (state) => state.realUsers
+  )
+  // const {
+  //   userId,
+  //   name,
+  //   username,
+  //   bio,
+  //   location,
+  //   tweets,
+  //   joined,
+  //   followers,
+  //   following,
+  // } = user
 const dispatch = useDispatch();
 
   return (
@@ -23,15 +37,15 @@ const dispatch = useDispatch();
         <img src={niolabrown} className='post__avatar' alt='profile-img' />
         <div className='msb-body profile-body'>
           <div className='msb-handle twitter-handle'>
-            <h3>Niola Brown</h3>
-            <p>@Niola_brown</p>
+            <h3>{myProfilePage?.name}</h3>
+            <p>@{myProfilePage?.username}</p>
           </div>
           <div className='msb-followers profile-followers'>
             <span>
-              1000<span>Following</span>
+              {myProfilePage?.following?.length}<span>Following</span>
             </span>
             <span>
-              5586<span>Followers</span>
+              {myProfilePage?.followers?.length}<span>Followers</span>
             </span>
           </div>
         </div>

@@ -12,6 +12,9 @@
  display:flex;
  justify-content: space-between;
 }
+.main-post>.link-image{
+ height:fit-content
+}
 a .post-ellipsis{
  color:var(--twitter-light-black)
 }
@@ -29,6 +32,10 @@ a .post-ellipsis:hover{
 .post__content{
  width:90%;
  margin-left: 10px;
+ color: var(--twitter-black);
+}
+.post__content:hover{
+ color: var(--twitter-black);
 }
 .post__title{
  display:flex;
@@ -46,6 +53,9 @@ a .post-ellipsis:hover{
  height: 30px;
  font-size: 10pt;
 }
+.sbp__handle>p{
+ margin-left: 5px;
+}
 .post__body{
  width:95%;
 
@@ -54,10 +64,16 @@ a .post-ellipsis:hover{
  max-width:553px;
 }
 .media__container{
- width:90%;
- height:auto;
+ width:100%;
+ max-height: 300px;
  border-radius: 20px;
  margin-top: 10px;
+}
+.media__container>img{
+ width:100%;
+ max-height: 300px;
+ object-fit: cover;
+ border-radius: 20px;
 }
 .post__interact__wrapper{
  width:100%;
@@ -90,18 +106,18 @@ a .post-ellipsis:hover{
  color:var(--twitter-blue);
 }
 .retweet-btn:hover .retweet-i {
- background-color: rgba(138, 235, 138, 0.196);
- color:rgb(30, 175, 30);
+ background-color: #8aeb8a32;
+ color:#1eaf1e;
 }
 .retweet-btn:hover{
- color:rgb(30, 175, 30);
+ color:#1eaf1e;
 }
 .heart-btn:hover .heart-i {
- background-color: rgba(255, 0, 0, 0.139);
- color:rgb(225, 53, 53);
+ background-color: #ff000023;
+ color:#e13535;
 }
 .heart-btn:hover{
- color:rgb(225, 53, 53);
+ color:#e13535;
 }
 .chart-btn:hover .chart-i {
  background-color: var(--twitter-light-blue);
@@ -116,4 +132,36 @@ a .post-ellipsis:hover{
 }
 .share-btn:hover{
  color:var(--twitter-blue);
+}
+.bounce{
+ animation: bounce 0.3s ease-in-out;
+ position:relative;
+ z-index:0;
+}
+.bounce-reg{
+ animation: bounce-reg 0.3s ease-in-out;
+ position:relative;
+ z-index:0;
+}
+@keyframes bounce {
+ 0%{
+  transform:scale(0.5)
+ }
+ 50%{
+  transform: scale(1.2);
+ }
+ 100%{
+  transform:scale(0.5)
+ }
+}
+@keyframes bounce-reg {
+ 0%{
+  transform:scale(0.5)
+ }
+ 50%{
+  transform: scale(1);
+ }
+ 100%{
+  transform:scale(0.5)
+ }
 }

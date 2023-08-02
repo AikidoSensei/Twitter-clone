@@ -1,21 +1,24 @@
-import React, { useState } from 'react'
-import niolabrown from '../../assets/niolabrown.jpg'
-import './Post.css'
+import React from 'react'
+
+import '../Center/Post.css'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { getTweet } from '../../features/MockUserSlice'
-const Post = ({data}) => {
-  const {  name, username, avatar, tweet, comments, image, likes, retweets, views } = data
-  const [like, setLike] = useState(false);
-  const [retweet, setRetweet] = useState(false);
-  
-  const dispatch = useDispatch();
+const UserPost = ({ post, user }) => {
+  const {
+    comments,
+    image,
+    likes,
+    retweets,
+    views,
+    tweet
+  } = post
+  const {name, username, profile_image} = user;
+  const dispatch = useDispatch()
   return (
     <article className='post__container'>
       <section className='main-post'>
-        <Link className='link-image' to={`user/${username}`}>
-          <img src={avatar} className='post__avatar' alt='profile-img' />
-        </Link>
+          <img src={profile_image} className='post__avatar' alt='profile-img' />
         <Link
           to='/tweet/'
           className='post__content'
@@ -24,7 +27,7 @@ const Post = ({data}) => {
               getTweet({
                 name,
                 username,
-                avatar,
+                profile_image,
                 tweet,
                 comments,
                 image,
@@ -60,36 +63,17 @@ const Post = ({data}) => {
             <i className='fa-regular fa-comment icon-bg comment-i' />
             {comments}
           </a>
-          <a
-            className='retweet-btn interact'
-            style={{
-              color: retweet ? '#1eaf1e' : 'var(--twitter-primaryfont)',
-            }}
-            onClick={() => {
-              setRetweet(!retweet)
-            }}
-          >
-            <i className='fa-solid fa-retweet icon-bg retweet-i' />
+          <a className='retweet-btn interact'>
+            <i className='fa-solid fa-retweet icon-bg retweet-i ' />
             {retweets}
           </a>
-          <a
-            className='heart-btn interact'
-            style={{
-              color: like ? '#e13535' : 'var(--twitter-primaryfont)',
-            }}
-            onClick={() => {
-              setLike(!like)
-            }}
-          >
-            {like ? (
-              <i
-                style={{ color: '#e13535' }}
-                className='fa-solid fa-heart icon-bg heart-i'
-              />
-            ) : (
-              <i className='fa-regular fa-heart icon-bg heart-i' />
-            )}
+          <a className='heart-btn interact'>
+            <i className='fa-regular fa-heart icon-bg heart-i ' />
             {likes}
+          </a>
+          <a className='chart-btn interact'>
+            <i className='fa-solid fa-chart-simple icon-bg chart-i' />
+            {views}
           </a>
           <a className='share-btn interact'>
             <i className='fa-solid fa-arrow-up-from-bracket icon-bg share-i' />
@@ -100,4 +84,4 @@ const Post = ({data}) => {
   )
 }
 
-export default Post
+export default UserPost

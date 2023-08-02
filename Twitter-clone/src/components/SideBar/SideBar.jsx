@@ -1,6 +1,6 @@
 import React from 'react'
 import './SideBar.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import icon from '../../assets/icon.png'
 import niolabrown from '../../assets/niolabrown.jpg'
 import Verified from '../Popups/Verified'
@@ -14,14 +14,35 @@ import {
   clearAll,
 } from '../../features/PopupSlice'
 import MobileNavBar from '../smallcomponents/MobileNavBar'
+import { logout } from '../../features/LoginSlice'
 const SideBar = () => {
   const { tweet, showLogout, more, verified } = useSelector(
     (store) => store.popup
   )
+  const { user } = useSelector((state) => state.loginUser)
+  // const {
+  //   userId,
+  //   name,
+  //   username,
+  //   bio,
+  //   location,
+  //   tweets,
+  //   joined,
+  //   followers,
+  //   following,
+  // } = user
+  // const log = user?.name
   const dispatch = useDispatch()
-  window.addEventListener('click',()=>{
+  const navigate = useNavigate()
+  window.addEventListener('click', () => {
     dispatch(clearAll())
   })
+  const handleLogout = (e)=>{
+    e.stopPropagation();
+    dispatch(logout())
+    // navigate('/login')
+
+  }
   return (
     <section className='sidebar-wrapper'>
       {tweet && <div className='dark-shade'></div>}
@@ -129,8 +150,8 @@ const SideBar = () => {
                 Connect
               </span>
               <span>
-                {' '}
-                <i class='fa-regular fa-pen-to-square'/>Draft
+                <i class='fa-regular fa-pen-to-square' />
+                Draft
               </span>
             </div>
           </div>
@@ -138,21 +159,23 @@ const SideBar = () => {
 
         <div className='sidebar-profile'>
           {showLogout && (
-            <div className='log-out-popup' onClick={(e) => e.stopPropagation()}>
-              <h3>Log out @Niola_brown</h3>
+            <div className='log-out-popup' onClick={handleLogout}>
+              <h3>Log out @{user?.username}</h3>
             </div>
           )}
           <div
             className='sbp-details'
             onClick={(e) => {
+              console.log('logged out')
               e.stopPropagation()
               dispatch(handleShowLogout())
+
             }}
           >
             <img src={niolabrown} className='profile-img' alt='profile-img' />
             <div className='sbp-handle'>
-              <h3>Niola</h3>
-              <p>@Niola_brown</p>
+              <h3>{user?.name}</h3>
+              <p>@{user?.username}</p>
             </div>
           </div>
           <i className='fa fa-ellipsis-h' />

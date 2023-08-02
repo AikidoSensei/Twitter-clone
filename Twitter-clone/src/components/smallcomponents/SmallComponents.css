@@ -31,6 +31,7 @@
  border:none;
  border-bottom: solid 1px var(--twitter-extra-light-gray);
  transition:0.3s;
+ z-index: 10;
 }
 .blur-up{
   transform: translateY(-60px);
@@ -297,4 +298,43 @@
  position:fixed;
  bottom: 0;
 }
+}
+.loading{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.loading-icon{
+  width:50px;
+  height: 50px;
+  animation: loading 1s ease-in-out infinite;
+}
+@keyframes loading {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.spin{
+  font-size: 35pt;
+  animation: spinning 1s ease-in-out infinite;
+  color:var(--twitter-blue)
+}
+@keyframes spinning {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    transform: rotate(360deg);
+  }
+  100%{
+    opacity: 0;
+  }
 }

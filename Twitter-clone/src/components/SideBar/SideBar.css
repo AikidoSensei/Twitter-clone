@@ -2,7 +2,7 @@
  display:flex;
  justify-content:right;
  min-width:25%;
- max-height: 100vh;
+ min-height: 100vh;
  overscroll-behavior: contain;
  padding-block: 10px;
  background-color: white;
@@ -21,11 +21,13 @@
  margin-right: 20px;
  position:relative;
  margin-top: 15px;
+ min-height: 100vh;
+
 }
  .sidebar-link{
  color:var(--twitter-light-black);
  font-size: 16pt;
- height: 50px;
+ height: 40px;
  font-family:arial;
  font-weight: 400;
  text-decoration: none;
@@ -38,7 +40,6 @@
 }
 .link-active{
  color:var(--twitter-black);
- height: 50px;
  font-family:arial;
  font-weight: 600;
 }
@@ -208,8 +209,8 @@
  display:flex;
  justify-content: center;
  align-items:center;
- min-width:50px;
- min-height: 50px;
+ min-width:40px;
+ min-height: 40px;
  border-radius: 50%;
  }
  .sidebar-container .sidebar-link>i{
@@ -222,6 +223,9 @@
   display:flex;
   justify-content: center;
   align-items: center;
+ }
+ .sidebar-link i{
+  font-size: 14pt;
  }
  .sb-tweet-btn{
  width:60px;

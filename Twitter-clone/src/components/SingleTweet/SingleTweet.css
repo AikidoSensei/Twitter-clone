@@ -73,3 +73,6 @@
 .tweet-interact a{
  color: var(--twitter-primaryfont);
 }
+.single-media{
+ margin-bottom: 10px;
+}

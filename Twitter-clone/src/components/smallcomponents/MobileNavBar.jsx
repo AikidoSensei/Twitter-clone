@@ -16,7 +16,7 @@ const MobileNavBar = () => {
         <i className='fa-solid fa-feather-pointed' />
       </div>
       <div className='mobile-nav-content'>
-        <NavLink to='/' className='mob-icon'>
+        <NavLink to='/home' className='mob-icon'>
           <i className='fas fa-home' />
         </NavLink>
         <NavLink to='/explore' className='mob-icon'>

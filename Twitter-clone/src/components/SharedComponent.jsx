@@ -2,14 +2,17 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import SideBar from './SideBar/SideBar'
 import Trend from './Trend/Trend'
-const SharedLayout = () => {
+import MobileNavBar from './smallcomponents/MobileNavBar'
+const SharedComponent = () => {
+
   return (
-    <div className='sharedlayout'>
+    <div>
       <SideBar />
       <Outlet />
       <Trend />
+      <MobileNavBar/>
     </div>
   )
 }
 
-export default SharedLayout
+export default SharedComponent

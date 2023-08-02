@@ -51,6 +51,22 @@
  border-radius: 50%;
  border: solid 5px white;
 }
+.follow{
+ position:absolute;
+ right:20px;
+ bottom:30px;
+ width: 100px;
+ color:white;
+ background-color:var(--twitter-black);
+ border: solid 1px var( --twitter-light-gray);
+ border-radius: 30px;
+ padding:4px 5px;
+ display:flex;
+ justify-content: center;
+ font-weight: 600;
+ font-family: 'Poppins';
+ cursor: pointer;
+}
 .edit-profile{
  position:absolute;
  right:20px;
@@ -70,7 +86,7 @@
  color:var(--twitter-black)
 }
 .profile-body{
- height: 190px;
+ min-height: 195px;
  padding-inline: 20px;
  font-family: arial;
  font-size: 11pt;

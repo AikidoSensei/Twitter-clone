@@ -1,33 +1,31 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './SmallComponents.css'
 import niolabrown from '../../assets/niolabrown.jpg'
 import axiosDispatch from '../../axios/globals'
 import { useSelector, useDispatch } from 'react-redux'
 
-const QuickTweet = ()=> {
-  const [tweet, setTweet] = useState('')
+const QuickReply = () => {
+  const [reply, setReply] = useState('')
   const dispatch = useDispatch()
 
-   const handlePost = async () => {
-     try {
-       console.log('tweeted')
-       const response = await axiosDispatch.post('/post', { tweetText: tweet })
-       setTweet('')
-
-     } catch (error) {
-       console.log(error)
-     }
-   }
+  const handlePost = async () => {
+    try {
+      console.log('tweeted')
+      const response = await axiosDispatch.post('/post', { tweetText: tweet })
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <main className='quick-tweet-wrapper'>
       <div className='tweet-container'>
         <div className='avatar-text'>
           <img src={niolabrown} alt='avatar' className='avatar' />
           <textarea
-            value={tweet}
-            onChange={(e) => setTweet(e.target.value)}
+            value={reply}
+            onChange={(e) => setReply(e.target.value)}
             type='text-area'
-            placeholder='What is happening?!'
+            placeholder='Post your reply!'
           />
         </div>
         <div className='tweet-icons-button'>
@@ -44,15 +42,11 @@ const QuickTweet = ()=> {
             <a className='icon-bg'>
               <i className='fa fa-smile' />
             </a>
-            <a className='icon-bg'>
-              <i className='fa fa-calendar' />
-            </a>
-            <a className='icon-bg'>
-              <i className='fa fa-map-marker-alt' />
-            </a>
+            
+      
           </section>
           <button className='quick-tweet-btn' onClick={handlePost}>
-            Tweet
+            Reply
           </button>
         </div>
       </div>
@@ -60,4 +54,4 @@ const QuickTweet = ()=> {
   )
 }
 
-export default QuickTweet
+export default QuickReply

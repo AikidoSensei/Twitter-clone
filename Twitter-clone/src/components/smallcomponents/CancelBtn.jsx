@@ -5,7 +5,7 @@ import { handleTweet, handleVerified, handleMobile } from '../../features/PopupS
 const CancelBtn = (e) => {
   const {tweet, verified, mobileSideBar } = useSelector(store=>store.popup)
   const dispatch = useDispatch();
-
+  
   const handleCancelBtn = (e)=>{
       e.stopPropagation()
     if(tweet === true){

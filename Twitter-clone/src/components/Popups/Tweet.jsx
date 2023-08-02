@@ -1,9 +1,26 @@
 import React from 'react'
+import axios from 'axios'
 import './Popups.css'
 import CancelBtn from '../smallcomponents/CancelBtn'
 import '../smallcomponents/SmallComponents.css'
 import niolabrown from '../../assets/niolabrown.jpg'
+import { useState } from 'react'
+import axiosDispatch from '../../axios/globals'
+import { useSelector, useDispatch } from 'react-redux'
+import { handleTweet } from '../../features/PopupSlice'
 const Tweet = () => {
+  const [tweet, setTweet] = useState('')
+  const dispatch = useDispatch()
+  const handlePost = async ()=>{
+      try {
+        console.log('tweeted');
+        const response = await axiosDispatch.post('/post',{tweetText:tweet})
+        dispatch(handleTweet())
+      } catch (error) {
+        console.log(error)
+      }
+    
+  }
   return (
     <div className='tweet-wrapper' onClick={(e)=>e.stopPropagation()}>
       <div className='cancel'>
@@ -17,7 +34,9 @@ const Tweet = () => {
               <a>
                 Everyone <i className='fa-solid fa-chevron-down' />
               </a>
-              <textarea type='text-area' placeholder='What is happening?!' />
+              <textarea value = {tweet} 
+              onChange={(e)=>setTweet(e.target.value)}
+              type='text-area' placeholder='What is happening?!' />
             </div>
           </div>
           <div className='privacy-tweet'>
@@ -46,7 +65,9 @@ const Tweet = () => {
                   <i className='fa fa-map-marker-alt' />
                 </a>
               </div>
-              <button className='quick-tweet-btn'>Tweet</button>
+              <button className='quick-tweet-btn'
+              onClick={handlePost}
+              >Tweet</button>
             </div>
           </div>
         </div>

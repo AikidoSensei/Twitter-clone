@@ -1,0 +1,879 @@
+ [
+    {
+      "name": "John Doe",
+      "username": "johndoe123",
+      "location": "New York, USA",
+      "date_joined": "July 2023",
+      "bio": "I love exploring new places and trying different cuisines!",
+      "tweets": [
+        {
+          "tweet_id": "ft3245f4t",
+          "tweet": "Feeling accomplished after a productive day! ✔️💼",
+          "likes": 25,
+          "retweets": 15,
+          "comments": 0,
+          "views": 400,
+          "user_id": 234,
+          "position": 990,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "bi765e4bwc",
+          "tweet": "Just had the most amazing meal at my favorite restaurant. The flavors were out of this world! 🍽️🤩",
+          "likes": 25,
+          "retweets": 20,
+          "comments": 0,
+          "views": 350,
+          "user_id": 123,
+          "position": 500,
+          "post_image": "https://c.ndtvimg.com/2021-04/umk8i7ko_pasta_625x300_01_April_21.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=886"
+        },
+        {
+          "tweet_id": "hb980k69yij",
+          "tweet": "Relaxing by the poolside 🏊‍♂️🌴",
+          "likes": 22,
+          "retweets": 14,
+          "comments": 0,
+          "views": 380,
+          "user_id": 777,
+          "position": 920,
+          "post_image": "https://www.thespruce.com/thmb/y6f1u7-GRoIxTDaHEvY63iTzKAc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Mirchandani-1-37-cfc2c3107a8345848f41cace95657128.jpg"
+        },
+        {
+          "tweet_id": "68765gtrv",
+          "tweet": "Excited to share that I'll be traveling to a new destination this weekend. Can't wait to explore! 🌍✈️",
+          "likes": 40,
+          "retweets": 30,
+          "comments": 0,
+          "views": 250,
+          "user_id": 456,
+          "position": 750,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "uy889kyujtt",
+          "tweet": "Having a great time with friends! 👫👬👭",
+          "likes": 20,
+          "retweets": 10,
+          "comments": 0,
+          "views": 400,
+          "user_id": 135,
+          "position": 180,
+          "post_image": "https://images.pexels.com/photos/4834142/pexels-photo-4834142.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKe2E0kBXcbqwTyfD2S-u9DWkIaaahm0yh4Q&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 37,
+      "following_count": 56
+    },
+    {
+      "name": "Emma Smith",
+      "username": "emma_smith",
+      "location": "London, UK",
+      "date_joined": "July 2023",
+      "bio": "Book lover and coffee enthusiast ☕️📚",
+      "tweets": [
+        {
+          "tweet_id": "45vybu6ib64u",
+          "tweet": "Exploring the city streets 🏙️",
+          "likes": 10,
+          "retweets": 5,
+          "comments": 0,
+          "views": 450,
+          "user_id": 246,
+          "position": 820,
+          "post_image": "https://images.pexels.com/photos/13264450/pexels-photo-13264450.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+          "tweet_id": "456b35gyert",
+          "tweet": "Just had the best ice cream ever! 🍦",
+          "likes": 25,
+          "retweets": 20,
+          "comments": 0,
+          "views": 350,
+          "user_id": 123,
+          "position": 500,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "w4g5vybtj",
+          "tweet": "Had a fantastic time at the concert last night. The music and energy were electrifying! 🎶🎤",
+          "likes": 15,
+          "retweets": 10,
+          "comments": 0,
+          "views": 500,
+          "user_id": 789,
+          "position": 250,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "g5ujvwe5gf",
+          "tweet": "Looking forward to the weekend. Planning a hiking trip with friends, surrounded by nature's beauty. 🏞️🥾",
+          "likes": 22,
+          "retweets": 13,
+          "comments": 0,
+          "views": 410,
+          "user_id": 101,
+          "position": 670,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "578h54gg",
+          "tweet": "Enjoying a lazy Sunday morning, sipping coffee and reading a captivating book. The rain outside adds to the cozy atmosphere. 🌧️☕📚",
+          "likes": 55,
+          "retweets": 25,
+          "comments": 0,
+          "views": 400,
+          "user_id": 789,
+          "position": 200,
+          "post_image": ""
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSEIg2If27PXkDyASLnU77bcRsJPfOEkbcRg&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 40,
+      "following_count": 15
+    },
+    {
+      "name": "Alex Chen",
+      "username": "alex_c",
+      "location": "Tokyo, Japan",
+      "date_joined": "July 2023",
+      "bio": "Tech geek and anime fan!",
+      "tweets": [
+        {
+          "tweet_id": "456g45f6",
+          "tweet": "Just completed a challenging coding project. Feeling accomplished and proud of the final result! 💻🎉 #DeveloperLife",
+          "likes": 30,
+          "retweets": 15,
+          "comments": 0,
+          "views": 300,
+          "user_id": 987,
+          "position": 900,
+          "post_image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww&w=1000&q=80"
+        },
+        {
+          "tweet_id": "897jgyfbg",
+          "tweet": "Exploring the local art gallery today. The creativity and talent of the artists amaze me. Art truly speaks to the soul! 🎨🖼️",
+          "likes": 40,
+          "retweets": 20,
+          "comments": 0,
+          "views": 350,
+          "user_id": 456,
+          "position": 100,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "786juryhvw",
+          "tweet": "Learning something new every day! 📚🌟",
+          "likes": 20,
+          "retweets": 10,
+          "comments": 0,
+          "views": 320,
+          "user_id": 345,
+          "position": 530,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "q456yu5hf",
+          "tweet": "Enjoying a beautiful sunset at the beach with friends. The colors in the sky are breathtaking. 🌅🏖️ #NatureBeauty",
+          "likes": 80,
+          "retweets": 40,
+          "comments": 0,
+          "views": 500,
+          "user_id": 234,
+          "position": 700,
+          "post_image": "https://images.unsplash.com/photo-1573561507036-b0110570e2e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8&w=1000&q=80"
+        },
+        {
+          "tweet_id": "54gy656urt",
+          "tweet": "Enjoying a cup of coffee in the morning ☕️",
+          "likes": 40,
+          "retweets": 20,
+          "comments": 0,
+          "views": 600,
+          "user_id": 222,
+          "position": 570,
+          "post_image": "https://coffeecups.co.uk/cdn/shop/collections/Barista_Cups_and_Saucers_Stack.jpg?v=1649233043&width=1500"
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_5oFfWM5S1PRLcNzhZnd8Ebi0rBnnxiXhRg&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 25,
+      "following_count": 35
+    },
+    {
+      "name": "Isabella Martinez",
+      "username": "isabella_m",
+      "location": "Mexico City, Mexico",
+      "date_joined": "July 2023",
+      "bio": "Passionate about art and photography 🎨📷",
+      "tweets": [
+        {
+          "tweet_id": "absrvt3456",
+          "tweet": "Celebrating a special milestone today! Grateful for the journey and all the wonderful people who supported me along the way. 🎂🎈🎉",
+          "likes": 65,
+          "retweets": 35,
+          "comments": 0,
+          "views": 450,
+          "user_id": 567,
+          "position": 400,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "345gfy56gh",
+          "tweet": "Ready for an exciting adventure! 🚀🌌",
+          "likes": 40,
+          "retweets": 30,
+          "comments": 0,
+          "views": 500,
+          "user_id": 456,
+          "position": 870,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "4356346yvgfs",
+          "tweet": "Spending quality time with family this weekend. Laughter and love fill the air as we create unforgettable memories together. ❤️👨‍👩‍👧‍👦",
+          "likes": 70,
+          "retweets": 30,
+          "comments": 0,
+          "views": 420,
+          "user_id": 876,
+          "position": 800,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "34g6335g23",
+          "tweet": "Attending a fascinating workshop on mindfulness and meditation. Learning to find inner peace and balance amidst life's chaos. 🧘‍♀️🌟",
+          "likes": 25,
+          "retweets": 15,
+          "comments": 0,
+          "views": 350,
+          "user_id": 543,
+          "position": 600,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "56eg4f346f",
+          "tweet": "Exploring the enchanting forest trails, feeling one with nature's embrace. Each step is a moment of pure bliss. 🌳🍃 #NatureLover",
+          "likes": 50,
+          "retweets": 20,
+          "comments": 0,
+          "views": 400,
+          "user_id": 987,
+          "position": 1000,
+          "post_image": "https://ggsc.s3.amazonaws.com/images/uploads/Forest_in_Japan.jpg"
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs9YguxtNQooiYm_SaxpDk1lpgPibcOSTpFw&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 50,
+     "following_count": 23
+    },
+    {
+      "name": "Pete vader",
+      "username": "peter_23",
+      "location": "New York, USA",
+      "date_joined": "July 2023",
+      "bio": "I love exploring new places and trying different cuisines!",
+      "tweets": [
+        {
+          "tweet_id": "456g45f6",
+          "tweet": "Just completed a challenging coding project. Feeling accomplished and proud of the final result! 💻🎉 #DeveloperLife",
+          "likes": 30,
+          "retweets": 15,
+          "comments": 0,
+          "views": 300,
+          "user_id": 987,
+          "position": 900,
+          "post_image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww&w=1000&q=80"
+        },
+        {
+          "tweet_id": "897jgyfbg",
+          "tweet": "Exploring the local art gallery today. The creativity and talent of the artists amaze me. Art truly speaks to the soul! 🎨🖼️",
+          "likes": 40,
+          "retweets": 20,
+          "comments": 0,
+          "views": 350,
+          "user_id": 456,
+          "position": 100,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "786juryhvw",
+          "tweet": "Learning something new every day! 📚🌟",
+          "likes": 20,
+          "retweets": 10,
+          "comments": 0,
+          "views": 320,
+          "user_id": 345,
+          "position": 530,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "q456yu5hf",
+          "tweet": "Enjoying a beautiful sunset at the beach with friends. The colors in the sky are breathtaking. 🌅🏖️ #NatureBeauty",
+          "likes": 80,
+          "retweets": 40,
+          "comments": 0,
+          "views": 500,
+          "user_id": 234,
+          "position": 700,
+          "post_image": "https://images.unsplash.com/photo-1573561507036-b0110570e2e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8&w=1000&q=80"
+        },
+        {
+          "tweet_id": "54gy656urt",
+          "tweet": "Enjoying a cup of coffee in the morning ☕️",
+          "likes": 40,
+          "retweets": 20,
+          "comments": 0,
+          "views": 600,
+          "user_id": 222,
+          "position": 570,
+          "post_image": "https://coffeecups.co.uk/cdn/shop/collections/Barista_Cups_and_Saucers_Stack.jpg?v=1649233043&width=1500"
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-u2gjvgQ_OHX2c2_pWwZk1A6ftfNQb-pnww&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 30,
+      "following_count": 12
+    },
+    {
+      "name": "Emmah",
+      "username": "pearl_17",
+      "location": "London, UK",
+      "date_joined": "July 2023",
+      "bio": "Book lover and coffee enthusiast ☕️📚",
+      "tweets": [
+        {
+          "tweet_id": "w3vtgfssz",
+          "tweet": "Spontaneous road trip with friends. The open road, music, and laughter make this adventure unforgettable. 🚗🎶🤣 #RoadTrip",
+          "likes": 90,
+          "retweets": 50,
+          "comments": 0,
+          "views": 500,
+          "user_id": 654,
+          "position": 250,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "q234fygtf",
+          "tweet": "Cherishing the beauty of the starry night sky. The universe is vast, and it reminds me of life's infinite possibilities. ✨🌌",
+          "likes": 35,
+          "retweets": 18,
+          "comments": 0,
+          "views": 380,
+          "user_id": 789,
+          "position": 400,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "3425fygt",
+          "tweet": "Enjoying a relaxing spa day. Pampering myself with massages and facials. Self-care is essential for a balanced life. 💆‍♀️🧖‍♀️ #SelfCare",
+          "likes": 45,
+          "retweets": 25,
+          "comments": 0,
+          "views": 350,
+          "user_id": 321,
+          "position": 300,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "54bu7tyh",
+          "tweet": "Chilling at the beach! 🏖️",
+          "likes": 15,
+          "retweets": 10,
+          "comments": 0,
+          "views": 500,
+          "user_id": 789,
+          "position": 250,
+          "post_image": "https://www.travelandleisure.com/thmb/HlNYcpqWt9t1IgQq1eTgJG3hp6k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/saud-beach-luzon-philippines-WRLDBEACH0421-15e2c368e7ad4495be803bd60cafa379.jpg"
+        },
+        {
+          "tweet_id": "4623bawersf",
+          "tweet": "Dinner with friends at a rooftop restaurant. The city lights below create a mesmerizing view. A night to remember! 🌃🍽️",
+          "likes": 60,
+          "retweets": 30,
+          "comments": 0,
+          "views": 420,
+          "user_id": 654,
+          "position": 600,
+          "post_image": ""
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGOUE57F1oBaV8kIKmLhLwzpnJL0w18YvvCw&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 40,
+      "following_count": 15
+    },
+    {
+      "name": "Chen Max",
+      "username": "max_c",
+      "location": "Tokyo, Japan",
+      "date_joined": "July 2023",
+      "bio": " anime fan!",
+      "tweets": [
+        {
+          "tweet_id": "345yhbe4wr",
+          "tweet": "Attending a thought-provoking art exhibition. The creativity on display sparks inspiration and awe. 🎨🗿 #ArtExpo",
+          "likes": 40,
+          "retweets": 20,
+          "comments": 0,
+          "views": 380,
+          "user_id": 876,
+          "position": 120,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "345vyhvd",
+          "tweet": "Weekend vibes - unwinding with my favorite TV show and some popcorn. A perfect way to relax and recharge. 📺🍿 #WeekendMood",
+          "likes": 50,
+          "retweets": 25,
+          "comments": 0,
+          "views": 400,
+          "user_id": 567,
+          "position": 900,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "wertvge43",
+          "tweet": "Spent the afternoon volunteering at a local animal shelter. The joy on their faces is heartwarming. 🐾❤️ #AnimalLove",
+          "likes": 70,
+          "retweets": 40,
+          "comments": 0,
+          "views": 500,
+          "user_id": 987,
+          "position": 80,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "34345g6yt",
+          "tweet": "Exploring the beautiful gardens in the city. Nature's tranquility amidst the bustling urban life is refreshing. 🌷🏙️ #CityEscape",
+          "likes": 35,
+          "retweets": 18,
+          "comments": 0,
+          "views": 320,
+          "user_id": 234,
+          "position": 70,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "56rgyrvs",
+          "tweet": "Attending a captivating theater performance tonight. The actors' talent is beyond words. Bravo! 🎭👏 #TheaterMagic",
+          "likes": 25,
+          "retweets": 15,
+          "comments": 0,
+          "views": 300,
+          "user_id": 876,
+          "position": 900,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "w5h6ryt544",
+          "tweet": "Exploring a hidden gem of a cafe. The aroma of coffee and the cozy atmosphere make it a perfect spot to unwind. ☕🏞️",
+          "likes": 55,
+          "retweets": 30,
+          "comments": 0,
+          "views": 450,
+          "user_id": 543,
+          "position": 600,
+          "post_image": ""
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVP9_elHoAON__ImbbTfSW0nAkeC-ODLpyMA&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 25,
+      "following_count": 35
+    },
+    {
+      "name": " Martinez",
+      "username": "bella_m",
+      "location": "Bangkok, Thailand",
+      "date_joined": "July 2023",
+      "bio": "Passionate about art and photography 🎨📷",
+      "tweets": [
+        {
+          "tweet_id": "34w53btrg",
+          "tweet": "Weekend road trip with friends. The laughter and camaraderie make every mile memorable. 🚗🛣️ #RoadTripAdventures",
+          "likes": 80,
+          "retweets": 45,
+          "comments": 0,
+          "views": 520,
+          "user_id": 321,
+          "position": 400,
+          "post_image": "https://hips.hearstapps.com/hmg-prod/images/roadtrip-1583526313.jpg?crop=0.669xw:1.00xh;0.107xw,0&resize=1200:*"
+        },
+        {
+          "tweet_id": "453544geyuj",
+          "tweet": "A stroll through the local farmer's market. Fresh produce and handmade goods make it a delightful experience. 🍅🍞 #FarmersMarket",
+          "likes": 65,
+          "retweets": 35,
+          "comments": 0,
+          "views": 400,
+          "user_id": 987,
+          "position": 100,
+          "post_image": ""
+        },
+
+        {
+          "tweet_id": "e54g6yvers",
+          "tweet": "Attending an inspiring TEDx talk today. The speakers' stories and ideas leave a profound impact. 🎤🧠 #TEDxInspiration",
+          "likes": 60,
+          "retweets": 35,
+          "comments": 0,
+          "views": 450,
+          "user_id": 654,
+          "position": 200,
+          "post_image": "https://talkstar-photos.s3.amazonaws.com/uploads/3527d5a7-a95c-475e-89c6-e92424606f03/MaryRoach_2009-stageshot.jpg"
+        },
+        {
+          "tweet_id": "45be6uy54",
+          "tweet": "Exploring a charming bookstore, surrounded by books that whisk you away to other worlds. 📚✨ #BookLoversParadise",
+          "likes": 50,
+          "retweets": 25,
+          "comments": 0,
+          "views": 380,
+          "user_id": 789,
+          "position": 600,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "5b4ytv5y",
+          "tweet": "Catching up with an old friend over a cup of coffee. The memories and laughter are a treasure. ☕👭 #FriendshipGoals",
+          "likes": 70,
+          "retweets": 40,
+          "comments": 0,
+          "views": 500,
+          "user_id": 876,
+          "position": 300,
+          "post_image": ""
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUpv02B4hsOrpoe4k5kGEfVKsW5IR-g4bYw&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 50,
+      "following_count": 10
+    },
+    {
+      "name": "Liam Johnson",
+      "username": "liam_j",
+      "location": "Sydney, Australia",
+      "date_joined": "July 2023",
+      "bio": "Adventure seeker and sports enthusiast 🏄‍♂️⚽️",
+      "tweets": [
+        {
+          "tweet_id": "676hygggty",
+          "tweet": "Trying out a new recipe in the kitchen! 🍳🥘",
+          "likes": 18,
+          "retweets": 9,
+          "comments": 0,
+          "views": 280,
+          "user_id": 888,
+          "position": 1000,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "3wvytcher",
+          "tweet": "Watching a mesmerizing dance performance. The grace and expression of the dancers captivate the audience. 💃🕺 #DanceArt",
+          "likes": 45,
+          "retweets": 20,
+          "comments": 0,
+          "views": 350,
+          "user_id": 234,
+          "position": 800,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "4355446u",
+          "tweet": "Admiring the stunning view from the mountaintop. Nature's beauty at its finest. 🏔️🌄 #MountainAdventures",
+          "likes": 80,
+          "retweets": 45,
+          "comments": 0,
+          "views": 520,
+          "user_id": 567,
+          "position": 50,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "7ji65hyvveer",
+          "tweet": "Celebrating a special occasion! 🎂🎈",
+          "likes": 18,
+          "retweets": 10,
+          "comments": 0,
+          "views": 340,
+          "user_id": 123,
+          "position": 160,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "67iuhtgyt6",
+          "tweet": "A day spent at the beach, basking in the sun and feeling the sand between my toes. Pure bliss! 🏖️☀️ #BeachLife",
+          "likes": 35,
+          "retweets": 18,
+          "comments": 0,
+          "views": 320,
+          "user_id": 321,
+          "position": 100,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "5vyuhtyuj4e",
+          "tweet": "Loving this new book! 📚❤️",
+          "likes": 5,
+          "retweets": 3,
+          "comments": 0,
+          "views": 600,
+          "user_id": 555,
+          "position": 900,
+          "post_image": "https://halcyonrealms.com/blogpics/gotartofbk29.jpg"
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToAY8qtvzE3PcDoHXATv5ElRhGFzqB45O3jQ&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 8,
+      "following_count": 30
+    },
+
+    {
+      "name": "Luka_Mobric",
+      "username": "luk_mob",
+      "location": "austri, Austri",
+      "date_joined": "July 2023",
+      "bio": "Adventure seeker and sports enthusiast 🏄‍♂️⚽️",
+      "tweets": [
+        {
+          "tweet_id": "ertvgc566",
+          "tweet": "Enjoying a fun-filled day at the amusement park. The thrill of the rides and the laughter are infectious. 🎢🎡 #AdventureTime",
+          "likes": 85,
+          "retweets": 50,
+          "comments": 0,
+          "views": 550,
+          "user_id": 987,
+          "position": 400,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "356y4534",
+          "tweet": "Spending the evening stargazing. The night sky holds countless wonders and mysteries. 🌌✨ #StarryNight",
+          "likes": 30,
+          "retweets": 15,
+          "comments": 0,
+          "views": 350,
+          "user_id": 876,
+          "position": 900,
+          "post_image": "https://imageio.forbes.com/specials-images/imageserve/577c129fd7c6ee6a37c42b99/This-is-the-Milky-Way-from-Concordia-Camp--in-Pakistan-s-Karakoram-Range-/960x0.jpg?format=jpg&width=960"
+        },
+        {
+          "tweet_id": "e56vgf4yt",
+          "tweet": "Cooking up a storm in the kitchen. Trying out new recipes and discovering culinary delights. 🍳🍲 #FoodieLife",
+          "likes": 55,
+          "retweets": 30,
+          "comments": 0,
+          "views": 400,
+          "user_id": 543,
+          "position": 600,
+          "post_image": ""
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUIjt1729YRBsVKe30AwJ2rHv4nWJBrUxxsQ&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 22,
+      "following_count": 31
+    },
+    {
+      "name": "Emily Carter",
+      "username": "emily_carter",
+      "location": "California, USA",
+      "date_joined": "July 2023",
+      "bio": "Passionate traveler and nature lover. Exploring the world one adventure at a time. 🌍✈️",
+      "tweets": [
+        {
+          "tweet_id": "wecrwvregv",
+          "tweet": "Enjoying the sunny weather ☀️",
+          "likes": 30,
+          "retweets": 15,
+          "comments": 0,
+          "views": 550,
+          "user_id": 789,
+          "position": 620,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "67bih675",
+          "tweet": "Excited for the weekend! 🎉",
+          "likes": 40,
+          "retweets": 30,
+          "comments": 0,
+          "views": 250,
+          "user_id": 456,
+          "position": 750,
+          "post_image": ""
+        },
+        {
+          "tweet_id": "456gtrgy",
+          "tweet": "What a beautiful view! 🌄",
+          "likes": 12,
+          "retweets": 8,
+          "comments": 0,
+          "views": 300,
+          "user_id": 102,
+          "position": 390,
+          "post_image": "https://i.pinimg.com/736x/33/d3/4b/33d34b3a4ef912447528e746849e6ebe.jpg"
+        }
+      ],
+      "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHjgJaU-UQRjLiIOx9J1pefMWKbl4oQ84HtA&usqp=CAU",
+      "banner_picture": "",
+      "followers_count": 25,
+      "following_count": 40
+    },
+{
+  "name": "Daniel Johnson",
+  "username": "daniel_johnson",
+  "location": "Nottingham, UK",
+  "date_joined": "July 2023",
+  "bio": "Tech enthusiast and software developer. Turning ideas into reality through coding. 💻🚀",
+  "tweets": [
+    {
+      "tweet_id": "6h76erge5",
+      "tweet": "Feeling motivated and productive today! 💪",
+      "likes": 35,
+      "retweets": 25,
+      "comments": 0,
+      "views": 420,
+      "user_id": 333,
+      "position": 450,
+      "post_image": ""
+    },
+    {
+      "tweet_id": "345f235ty",
+      "tweet": "Weekend getaway! 🚗✈️",
+      "likes": 8,
+      "retweets": 4,
+      "comments": 0,
+      "views": 200,
+      "user_id": 666,
+      "position": 50,
+      "post_image": ""
+    },
+    {
+      "tweet_id": "56g65hu54g",
+      "tweet": "Missing the old times! 🕰️",
+      "likes": 25,
+      "retweets": 18,
+      "comments": 0,
+      "views": 500,
+      "user_id": 444,
+      "position": 370,
+      "post_image": "https://images.immediate.co.uk/production/volatile/sites/21/2022/11/Specialized-Epic-Comp-and-Cannondale-Scalpel-Carbon-4-08-8d8ab8f.jpg?quality=90&resize=620,413"
+    },
+    {
+      "tweet_id": "bncb45y5634",
+      "tweet": "Watching my favorite movie! 🍿🎬",
+      "likes": 20,
+      "retweets": 12,
+      "comments": 0,
+      "views": 370,
+      "user_id": 987,
+      "position": 950,
+      "post_image": ""
+    }
+  ],
+  "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpj2U7K019JtHhS6jzilkZt3rKKGDm2SnwyIh_kYIfGKIzy6G_pHguGZk6f7kkXCIrAyY&usqp=CAU",
+  "banner_picture": "",
+  "followers_count": 30,
+  "following_count": 35
+},
+{
+  "name": "Michael Nguyen",
+  "username": "michael_nguyen",
+  "location": "New York, USA",
+  "date_joined": "July 2023",
+  "bio": "Fitness enthusiast and personal trainer. Empowering people to achieve their health goals. 💪🏋️‍♂️",
+  "tweets": [
+    {
+      "tweet_id": "k890o67j657h",
+      "tweet": "Getting ready for a big event! 🎉👗",
+      "likes": 28,
+      "retweets": 15,
+      "comments": 0,
+      "views": 400,
+      "user_id": 876,
+      "position": 240,
+      "post_image": ""
+    },
+    {
+      "tweet_id": "q2s3rdrfgb",
+      "tweet": "Feeling grateful for my friends and family! ❤️",
+      "likes": 45,
+      "retweets": 25,
+      "comments": 0,
+      "views": 480,
+      "user_id": 765,
+      "position": 650,
+      "post_image": ""
+    },
+    {
+      "tweet_id": "87967jijnh",
+      "tweet": "Trying out a new hobby! 🎨✨",
+      "likes": 14,
+      "retweets": 8,
+      "comments": 0,
+      "views": 250,
+      "user_id": 654,
+      "position": 510,
+      "post_image": ""
+    },
+    {
+      "tweet_id": "g5y754h67",
+      "tweet": "Weekend vibes! 🌟",
+      "likes": 10,
+      "retweets": 5,
+      "comments": 0,
+      "views": 300,
+      "user_id": 543,
+      "position": 810,
+      "post_image": ""
+    }
+  ],
+  "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQydtGRtOn2_hEiZrSgxZ3mYSImTN28Z5tXsg&usqp=CAU",
+  "banner_picture": "",
+  "followers_count": 45,
+  "following_count": 50
+},
+{
+  "name": "Isabella Russo",
+  "username": "isabella_russo",
+  "location": "Rome, Italy",
+  "date_joined": "July 2023",
+  "bio": "Passionate about cooking and sharing recipes that bring joy to the table. 🍝🍷",
+  "tweets": [
+    {
+      "tweet_id": "j7ijnrttevwe",
+      "tweet": "Feeling blessed and grateful! 🙏",
+      "likes": 15,
+      "retweets": 7,
+      "comments": 0,
+      "views": 220,
+      "user_id": 321,
+      "position": 110,
+      "post_image": ""
+    },
+    {
+      "tweet_id": "45f32trvrb",
+      "tweet": "Exploring the great outdoors! 🏞️🌲",
+      "likes": 32,
+      "retweets": 18,
+      "comments": 0,
+      "views": 480,
+      "user_id": 210,
+      "position": 780,
+      "post_image": "https://youthtoday.org/wp-content/uploads/sites/13/2019/05/OPED-DeanDrobot-Shutterstock_1207772488.jpg"
+    }
+  ],
+  "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyyKSTlVA9UakbqtQipYb7y3usJaCKbyXhMg&usqp=CAU",
+  "banner_picture": "",
+  "followers_count": 35,
+  "following_count": 30
+}
+  ]

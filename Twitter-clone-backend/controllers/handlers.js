@@ -11,8 +11,7 @@ const getInitialData = async (req, res) => {
 }
 const getMockUser = async (req, res) => {
   try {
-    console.log(req.params)
-    console.log('someone got user')
+    console.log('someone got mockuser')
     const user = mockUsers.find((user) => user.username === req.params.id)
     res.status(200).json(user)
   } catch (error) {
@@ -21,7 +20,7 @@ const getMockUser = async (req, res) => {
 }
 const getAllTweets = async (req, res) => {
   try {
-    console.log('real')
+
     const tweets = await Tweet.find({});
     if(!tweets){
       res.status(StatusCodes.NOT_FOUND).json({msg:'not found'})
@@ -57,7 +56,6 @@ const postTweet = async (req, res) => {
     const user = await User.findOne({_id:req.user.userId})
     user.tweets.push(tweet.tweetId)
     await user.save()
-    console.log(req.body)
     res.status(StatusCodes.CREATED).json({tweet})
   } catch (error) {
    console.log(error)
@@ -106,7 +104,6 @@ const getTweet = async (req, res) => {
       res.status(StatusCodes.NOT_FOUND).json({ msg: 'not found' })
       return;
     }
-    console.log(tweet)
     res.status(StatusCodes.OK).json(tweet)
   } catch (error) {
     console.log(error);
@@ -132,6 +129,23 @@ const getUser = async (req, res)=>{
   }
 }
 
+const getUserTweets = async (req, res)=>{
+  try {
+    const id = req.params.id
+    const tweets = await Tweet.find({createdBy:id})
+    if (!tweets) {
+      res.status(StatusCodes.NOT_FOUND).json({ msg: 'not found' })
+      return;
+    }
+    res.status(StatusCodes.OK).json(tweets)
+  } catch (error) {
+    console.log(error)
+    res
+      .status(StatusCodes.INTERNAL_SERVER_ERROR)
+      .json({ msg: 'something went wrong please try again later' })
+  }
+}
+
 const like = async (req, res)=>{
   try {
     const userId = req.user.userId
@@ -148,7 +162,6 @@ const like = async (req, res)=>{
     const liked = tweet.likes.push(userId)
     await tweet.save()
 
-    console.log(tweet.likes.length)
     res.status(StatusCodes.CREATED).json(tweet)
   } catch (error) {
     console.log(error);
@@ -198,7 +211,7 @@ const retweet = async (req, res)=>{
      const retweets = tweet.retweets.push(userId)
      await tweet.save()
 
-     console.log(tweet.retweets.length)
+
      res.status(StatusCodes.CREATED).json(tweet)
    } catch (error) {
      console.log(error)
@@ -306,7 +319,6 @@ const postReply = async (req, res)=>{
     tweet.comments.push(reply.replyId)
     await tweet.save()
     res.status(StatusCodes.CREATED).json(reply)
-
   } catch (error) {
     console.log(error);
     res
@@ -470,6 +482,7 @@ module.exports = {
   getMyTweets,
   getMyProfile,
   getUser,
+  getUserTweets,
   getTweet,
   postTweet,
   deleteTweet,

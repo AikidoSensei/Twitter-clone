@@ -6,6 +6,7 @@ const {
   getMyTweets,
   getMyProfile,
   getUser,
+  getUserTweets,
   getMockUser,
   getTweet,
   postTweet,
@@ -34,6 +35,7 @@ router.route('/follow/:id').post(follow).patch(unfollow)
 router.route('/myprofile').get(getMyProfile)
 router.route('/mytweets').get(getMyTweets)
 router.route('/user/:id').get(getUser)
+router.route('/usertweets/:id').get(getUserTweets)
 router.route('/post').post(postTweet)
 router.route('/tweet/:id').get(getTweet).delete(deleteTweet)
 router.route('/like/:id').post(like).patch(unlike)

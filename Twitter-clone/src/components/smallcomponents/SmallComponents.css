@@ -181,6 +181,11 @@
  color:white;
  margin-right: 20px;
  padding-block:8px;
+ transition: 0.3s ease-in-out;
+
+}
+.quick-tweet-btn:focus{
+ outline: none;
 }
 .quick-tweet-btn:hover{
   border:solid 1px var(--twitter-white-blue);

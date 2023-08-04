@@ -8,18 +8,20 @@ import { useState } from 'react'
 import axiosDispatch from '../../axios/globals'
 import { useSelector, useDispatch } from 'react-redux'
 import { handleTweet } from '../../features/PopupSlice'
+import { usePostTweetMutation } from '../../features/ApiSlice'
 const Tweet = () => {
   const [tweet, setTweet] = useState('')
   const dispatch = useDispatch()
+  const [postTweet] = usePostTweetMutation()
+
   const handlePost = async ()=>{
-      try {
-        console.log('tweeted');
-        const response = await axiosDispatch.post('/post',{tweetText:tweet})
-        dispatch(handleTweet())
-      } catch (error) {
-        console.log(error)
-      }
-    
+    if(tweet.length < 1){
+      dispatch(handleTweet())
+      return;
+    }
+    postTweet(tweet)
+    setTweet('')
+    dispatch(handleTweet())
   }
   return (
     <div className='tweet-wrapper' onClick={(e)=>e.stopPropagation()}>

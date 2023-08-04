@@ -1,7 +1,9 @@
 import React from 'react'
 import SearchBar from '../smallcomponents/SearchBar'
 import './Trend.css'
+
 const Trend = () => {
+
   return (
     <div className='trend-wrapper'>
       <div className='trend-container'>

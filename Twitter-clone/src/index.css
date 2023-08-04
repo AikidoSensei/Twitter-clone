@@ -14,6 +14,11 @@
  --transparent-blur:#ffffffde;
 }
 
+.verified{
+  font-size: 10pt;
+  color:var(--twitter-blue)
+}
+
 a {
   font-weight: 500;
   color: #646cff;

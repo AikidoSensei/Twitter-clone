@@ -8,7 +8,7 @@ import Loading from '../smallcomponents/Loading'
 import RealPost from '../Center/RealPost'
 import { useGetMyProfileQuery, useGetMyTweetsQuery } from '../../features/ApiSlice'
 const MyProfile = () => {
-  const {data:tweet, isLoading, error} = useGetMyProfileQuery()
+  const {data:user, isLoading, error} = useGetMyProfileQuery()
   const {data:myOwnTweets} = useGetMyTweetsQuery()
 
   return (
@@ -20,8 +20,8 @@ const MyProfile = () => {
           <div className='profile-blur'>
             <BackBtn />
             <div className='profile-blur-detail'>
-              <h3>{tweet?.name}</h3>
-              <p>{tweet?.tweets?.length} Tweets</p>
+              <h3>{user?.name} </h3>
+              <p>{myOwnTweets?.length} Tweets</p>
             </div>
           </div>
           <div className='profile-media'>
@@ -35,12 +35,15 @@ const MyProfile = () => {
           </div>
           <div className='profile-body'>
             <div className='twitter-handle'>
-              <h3>{tweet?.name}</h3>
-              <p>@{tweet?.username}</p>
+              <h3>
+                {user?.name} <i className='fa-solid fa-circle-check verified' />
+              </h3>
+              <p>@{user?.username}</p>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
               excepturi.
+            
             </p>
             <div className='location-joined'>
               <span>
@@ -48,16 +51,16 @@ const MyProfile = () => {
               </span>
               <span>
                 <i className='fa-solid fa-calendar-days' />
-                Joined {tweet?.joined}
+                Joined {user?.joined}
               </span>
             </div>
             <div className='profile-followers'>
               <span>
-                {tweet?.following?.length}
+                {user?.following?.length}
                 <span>Following</span>
               </span>
               <span>
-                {tweet?.followers?.length}
+                {user?.followers?.length}
                 <span>Followers</span>
               </span>
             </div>
@@ -67,7 +70,7 @@ const MyProfile = () => {
           </div>
           <div className='tweet-container'>
             {myOwnTweets?.toReversed().map((item) => {
-              return <RealPost data={item} />
+              return <RealPost key={item.tweetId} data={item} />
             })}
           </div>
         </>

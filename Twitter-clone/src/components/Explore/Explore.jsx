@@ -8,7 +8,11 @@ import SearchBar from '../smallcomponents/SearchBar'
 import MobileNavBar from '../smallcomponents/MobileNavBar'
 import { useDispatch } from 'react-redux'
 import { handleMobile } from '../../features/PopupSlice'
+import { useGetAllTweetQuery } from '../../features/ApiSlice'
+import RealPost from '../Center/RealPost'
+
 const Explore = () => {
+  const { isLoading, isError, data: realTweets } = useGetAllTweetQuery()
   const dispatch = useDispatch()
   return (
     <div className='home-center-wrapper'>
@@ -67,17 +71,9 @@ const Explore = () => {
         </div>
       </div>
       <div className='tweet-container'>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {realTweets.toReversed().map((item) => {
+          return <RealPost key={item._id} data={item} />
+        })}
       </div>
       <div className='mobile-nav-fixed'>
         <MobileNavBar />

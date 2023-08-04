@@ -1,83 +1,72 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import niolabrown from '../../assets/niolabrown.jpg'
 import defaultAvatar from '../../assets/default.webp'
-import './Post.css'
+import '../Center/Post.css'
+
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { getTweet } from '../../features/MockUserSlice'
 import {
-  useLikePostMutation,
-  useUnlikePostMutation,
+  useLikeReplyMutation,
+  useUnlikeReplyMutation,
+  useRetweetReplyMutation,
+  useUnretweetReplyMutation,
 } from '../../features/ApiSlice'
-import { useRetweetPostMutation, useUnretweetPostMutation } from '../../features/ApiSlice'
-import DeleteTweet from '../Popups/DeleteTweet'
-import { handleDelete } from '../../features/PopupSlice'
-const RealPost = ({ data }) => {
-  const {user:{userId}} = useSelector(state=>state.loginUser);
+import { handleDeleteReply } from '../../features/PopupSlice'
 
-  const [showDelete, setShowDelete] = useState(false);
-
-  const [showConfirmDelete, setShowConfirmDelete] = useState(false)
+const Reply = ({ data }) => {
+  const {
+    user: { userId },
+  } = useSelector((state) => state.loginUser)
 
   const [like, setLike] = useState(false)
   const [retweet, setRetweet] = useState(false)
+  const [showDelete, setShowDelete] = useState(false);
 
-  const [likePost] = useLikePostMutation()
-  const [unlikePost] = useUnlikePostMutation()
-  const [retweetPost] = useRetweetPostMutation()
-  const [unretweetPost] = useUnretweetPostMutation() 
+  const [likeReply] = useLikeReplyMutation()
+  const [unlikeReply] = useUnlikeReplyMutation()
+  const [retweetReply] = useRetweetReplyMutation()
+  const [unretweetReply] = useUnretweetReplyMutation()
 
-  const handleLike = ()=>{
-    if(!data.likes.includes(userId)){
-      likePost(data._id)
+  const handleLike = () => {
+    if (!data.likes.includes(userId)) {
+      likeReply(data._id)
       setLike(true)
     }
   }
-
-  const handleUnLike = ()=>{
- console.log('try unlike')
+  const handleUnLike = () => {
+    console.log('try unlike')
     if (data.likes.includes(userId)) {
-      unlikePost(data._id)
+      unlikeReply(data._id)
       setLike(false)
     }
   }
-  const handleRetweet = ()=>{
-    if(!data.retweets.includes(userId)){
-      retweetPost(data._id)
+  const handleRetweet = () => {
+    if (!data.retweets.includes(userId)) {
+      retweetReply(data._id)
       setRetweet(true)
     }
   }
-
-  const handleUnretweet = ()=>{
- console.log('try unretweet')
+  const handleUnretweet = () => {
+    console.log('try unretweet')
     if (data.retweets.includes(userId)) {
-      unretweetPost(data._id)
+      unretweetReply(data._id)
       setRetweet(false)
     }
   }
-  const dispatch = useDispatch()
-  useEffect(()=>{
-    window.addEventListener('scroll', ()=>{
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
       setShowDelete(false)
     })
-    return window.removeEventListener('scroll', ()=>{
+    return window.removeEventListener('scroll', () => {
       setShowDelete(false)
     })
   })
+  const dispatch = useDispatch()
   return (
-    <article
-      className='post__container'
-      onClick={() => {
-        setShowDelete(false)
-      }}
-    >
+    <article className='post__container' onClick={() => setShowDelete(false)}>
       <section className='main-post'>
-        <Link
-          className='link-image'
-          to={
-            data.createdBy === userId ? `/profile` : `/user/${data?.createdBy}`
-          }
-        >
+        <Link className='link-image' to={`/user/${data?.createdBy}`}>
           <img
             src={data.avatar ? avatar : defaultAvatar}
             className='post__avatar'
@@ -97,9 +86,6 @@ const RealPost = ({ data }) => {
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
-                if (data?.createdBy !== userId) {
-                  return
-                }
                 setShowDelete(!showDelete)
               }}
             >
@@ -112,18 +98,23 @@ const RealPost = ({ data }) => {
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
-                    dispatch(handleDelete(data._id))
+                    dispatch(
+                      handleDeleteReply({
+                        tweetId: data.tweetId,
+                        replyId: data.replyId,
+                      })
+                    )
                     setShowDelete(false)
                   }}
                 >
                   <i className='fa-solid fa-trash ' />
-                  Delete tweet
+                  Delete reply
                 </span>
               </div>
             )}
           </div>
           <div className='post__body'>
-            <div className='post__text__content'>{data?.tweetText}</div>
+            <div className='post__text__content'>{data?.replyText}</div>
             {
               <div className='media__container'>
                 {data?.image && <img src={data?.image} alt='post-image' />}
@@ -188,4 +179,4 @@ const RealPost = ({ data }) => {
   )
 }
 
-export default RealPost
+export default Reply

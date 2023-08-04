@@ -13,12 +13,8 @@ import Loading from '../smallcomponents/Loading'
 const HomeCenter = () => {
  const { mobileSideBar } = useSelector((store) => store.popup)
  const {mockTweets} = useSelector((store)=>store.mockUsers)
-
-//  const {realTweets} = useSelector((store)=>store.realUsers)
   
  const {isLoading, isError, data:realTweets} = useGetAllTweetQuery()
-
-console.log(realTweets)
 
 const dispatch = useDispatch()
 useEffect(()=>{
@@ -39,13 +35,13 @@ if(isLoading){
         <div className='tweets-container'>
           <QuickTweet />
           <div className="realUsers">
-            {realTweets.map((item)=>{
-              return <RealPost data={item}/>
+            {realTweets.toReversed().map((item)=>{
+              return <RealPost key={item._id} data={item} />
             })}
           </div>
           <div className="mockUsers">
             {mockTweets.map((item)=>{
-              return <Post data={item}/>
+              return <Post key={item.username }data={item}/>
             })}
           </div>
         </div>

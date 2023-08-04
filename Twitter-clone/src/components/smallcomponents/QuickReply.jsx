@@ -3,19 +3,19 @@ import './SmallComponents.css'
 import niolabrown from '../../assets/niolabrown.jpg'
 import axiosDispatch from '../../axios/globals'
 import { useSelector, useDispatch } from 'react-redux'
+import { usePostReplyMutation } from '../../features/ApiSlice'
+const QuickReply = ({id}) => {
 
-const QuickReply = () => {
   const [reply, setReply] = useState('')
   const dispatch = useDispatch()
+  const [postReply] = usePostReplyMutation()
 
-  const handlePost = async () => {
-    try {
-      console.log('tweeted')
-      const response = await axiosDispatch.post('/post', { tweetText: tweet })
-    } catch (error) {
-      console.log(error)
-    }
+  const handleReply = ()=>{
+    postReply({id, reply})
+    setReply('')
   }
+  
+ 
   return (
     <main className='quick-tweet-wrapper'>
       <div className='tweet-container'>
@@ -42,10 +42,8 @@ const QuickReply = () => {
             <a className='icon-bg'>
               <i className='fa fa-smile' />
             </a>
-            
-      
           </section>
-          <button className='quick-tweet-btn' onClick={handlePost}>
+          <button className='quick-tweet-btn' onClick={handleReply}>
             Reply
           </button>
         </div>

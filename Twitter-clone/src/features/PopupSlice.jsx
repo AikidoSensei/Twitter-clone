@@ -5,7 +5,11 @@ const initialState = {
  showLogout:false,
  more:false,
  verified:false,
- mobileSideBar: false
+ mobileSideBar: false,
+ deleteId:'',
+ confirmDelete:false,
+ deleteReplyIds:{},
+ confirmDeleteReply:false,
 }
 
 const popupSlice = createSlice({
@@ -50,8 +54,28 @@ const popupSlice = createSlice({
    state.more = false
    state.verified = false
    state.mobileSideBar = false
+   state.confirmDelete = false
+   state.confirmDeleteReply = false
+  },
+  handleDelete:(state, {payload})=>{
+   state.tweet = false
+   state.showLogout = false
+   state.more = false
+   state.verified = false
+   state.mobileSideBar = false
+   state.confirmDelete = !state.confirmDelete
+   state.deleteId = payload
+  },
+  handleDeleteReply:(state, {payload})=>{
+   state.tweet = false
+   state.showLogout = false
+   state.more = false
+   state.verified = false
+   state.mobileSideBar = false
+   state.confirmDeleteReply = !state.confirmDeleteReply
+   state.deleteReplyIds = payload
   }
  }
 })
-export const { handleTweet, handleShowLogout, handleMore, handleVerified, handleMobile, clearAll } = popupSlice.actions
+export const { handleTweet, handleShowLogout, handleMore, handleVerified, handleMobile, handleDelete, handleDeleteReply, clearAll } = popupSlice.actions
 export default popupSlice.reducer

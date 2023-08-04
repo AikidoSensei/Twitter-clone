@@ -3,20 +3,18 @@ import './SmallComponents.css'
 import niolabrown from '../../assets/niolabrown.jpg'
 import axiosDispatch from '../../axios/globals'
 import { useSelector, useDispatch } from 'react-redux'
-
+import { usePostTweetMutation } from '../../features/ApiSlice'
 const QuickTweet = ()=> {
   const [tweet, setTweet] = useState('')
   const dispatch = useDispatch()
 
+  const [postTweet] = usePostTweetMutation()
    const handlePost = async () => {
-     try {
-       console.log('tweeted')
-       const response = await axiosDispatch.post('/post', { tweetText: tweet })
-       setTweet('')
-
-     } catch (error) {
-       console.log(error)
-     }
+    if (tweet.length < 1) {
+      return
+    }
+     postTweet(tweet)
+     setTweet('')
    }
   return (
     <main className='quick-tweet-wrapper'>

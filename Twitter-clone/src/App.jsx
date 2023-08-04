@@ -22,25 +22,36 @@ import Login from './components/LoginSignUp/Login'
 import SignUp from './components/LoginSignUp/SignUp'
 import ProtectedRoutes from './ProtectedRoute'
 import { mockData } from './features/MockUserSlice'
-import { realTweets } from './features/RealUserSlice'
-import { myProfile } from './features/RealUserSlice'
+
+import DeleteTweet from './components/Popups/DeleteTweet'
+import DeleteReply from './components/Popups/DeleteReply'
+
 const App = () => {
 
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(realTweets())
     dispatch(mockData())
-    dispatch(myProfile())
   },[])
 
-  const { tweet, showLogout, more, verified, mobileSideBar } = useSelector((store) => store.popup)
-  console.log(tweet)
+  const {
+    tweet,
+    showLogout,
+    more,
+    verified,
+    mobileSideBar,
+    confirmDelete,
+    confirmDeleteReply,
+    deleteId,
+  } = useSelector((store) => store.popup)
+
   return (
     <main className='homepage-layout'>
       <BrowserRouter>
         {MobileSideBar && <MobileSideBar/>}
         {tweet && <Tweet />}
         {verified && <Verified />}
+        {confirmDelete && <DeleteTweet id={deleteId}/>}
+        {confirmDeleteReply && <DeleteReply />}
         <Routes>
           <Route element={<ProtectedRoutes/>}>
           <Route path='/' element={<SharedComponent />} >

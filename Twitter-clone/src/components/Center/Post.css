@@ -1,3 +1,6 @@
+body{
+ position: relative;
+}
 .post__container{
  width:100%;
  display:flex;
@@ -6,6 +9,9 @@
  border:none;
  border-bottom: solid 1px var(--twitter-extra-light-gray);
  background-color: white;
+}
+.post__container:hover{
+ background-color: var(--twitter-super-light-gray)
 }
 .main-post{
  width:100%;
@@ -143,6 +149,35 @@ a .post-ellipsis:hover{
  position:relative;
  z-index:0;
 }
+.delete-modal{
+ position:absolute;
+ right:30px;
+ width:200px;
+ height:40px;
+ background-color: white;
+ z-index: 9;
+ border-radius: 10px;
+ color:#e13535;
+ box-shadow: 0 0 5px var(--twitter-primaryfont);
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.delete-modal>span{
+ width:100%;
+ height: 100%;
+ display:flex;
+ align-items: center;
+ border-radius: 10px;
+}
+.delete-modal>span:hover{
+ background-color: var(--twitter-super-light-gray);
+}
+.delete-modal>span>i{
+ margin-right: 20px;
+ margin-left: 10px;
+}
+
 @keyframes bounce {
  0%{
   transform:scale(0.5)

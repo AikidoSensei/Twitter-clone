@@ -50,6 +50,7 @@
 .tweet-activity p{
  font-weight: 600;
  margin-right: 10px;
+ font-family: 'arial';
 }
 .tweet-activity span{
  font-weight: 400;
@@ -72,6 +73,7 @@
 }
 .tweet-interact a{
  color: var(--twitter-primaryfont);
+ 
 }
 .single-media{
  margin-bottom: 10px;

@@ -4,6 +4,7 @@ import './Post.css'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { getTweet } from '../../features/MockUserSlice'
+import { handleUserError } from '../../features/PopupSlice'
 const Post = ({data}) => {
   const {  name, username, avatar, tweet, comments, image, likes, retweets, views } = data
   const [like, setLike] = useState(false);
@@ -11,13 +12,15 @@ const Post = ({data}) => {
   
   const dispatch = useDispatch();
   return (
-    <article className='post__container'>
+    <article className='post__container' onClick={(e)=>{
+      e.stopPropagation()
+      dispatch(handleUserError())
+    }} >
       <section className='main-post'>
-        <Link className='link-image' to={`user/${username}`}>
+        <Link className='link-image'>
           <img src={avatar} className='post__avatar' alt='profile-img' />
         </Link>
         <Link
-          to='/tweet/'
           className='post__content'
           onClick={() => {
             dispatch(

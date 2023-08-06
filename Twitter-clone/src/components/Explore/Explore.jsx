@@ -1,10 +1,9 @@
 import React from 'react'
-import BackBtn from '../smallcomponents/BackBtn'
+import twitterX from '../../assets/icon.png'
 import './Explore.css'
-import banner from '../../assets/tasty-hero-wallpaper.jpg'
+
 import niolabrown from '../../assets/niolabrown.jpg'
-import Post from '../Center/Post'
-import SearchBar from '../smallcomponents/SearchBar'
+import Loading from '../smallcomponents/Loading'
 import MobileNavBar from '../smallcomponents/MobileNavBar'
 import { useDispatch } from 'react-redux'
 import { handleMobile } from '../../features/PopupSlice'
@@ -14,6 +13,13 @@ import RealPost from '../Center/RealPost'
 const Explore = () => {
   const { isLoading, isError, data: realTweets } = useGetAllTweetQuery()
   const dispatch = useDispatch()
+  if (isLoading) {
+    return (
+      <div className='home-center-wrapper'>
+        <Loading />
+      </div>
+    )
+  }
   return (
     <div className='home-center-wrapper'>
       <div className='profile-blur'>
@@ -35,40 +41,9 @@ const Explore = () => {
       </div>
       <div className='center-trends main-trends'>
         <h2>Trends for you</h2>
-        <div className='trend'>
-          <div className='title-trend'>
-            <p>Sports Trending</p>
-            <i className='fa fa-ellipsis-h post-ellipsis' />
-          </div>
-          <div className='body-trend'>
-            <h4>Leo Messi</h4>
-            <p>3000 Tweets</p>
-          </div>
-        </div>
-        <div className='trend'>
-          <div className='title-trend'>
-            <p>Sports Trending</p>
-            <i className='fa fa-ellipsis-h post-ellipsis' />
-          </div>
-          <h4>Leo Messi</h4>
-          <p>3000 Tweets</p>
-        </div>
-        <div className='trend'>
-          <div className='title-trend'>
-            <p>Sports Trending</p>
-            <i className='fa fa-ellipsis-h post-ellipsis' />
-          </div>
-          <h4>Leo Messi</h4>
-          <p>3000 Tweets</p>
-        </div>
-        <div className='trend'>
-          <div className='title-trend'>
-            <p>Sports Trending</p>
-            <i className='fa fa-ellipsis-h post-ellipsis' />
-          </div>
-          <h4>Leo Messi</h4>
-          <p>3000 Tweets</p>
-        </div>
+        <img src={twitterX} alt="twitter" className='twitter-x' />
+        <h4>we have no trends now check back later </h4>
+
       </div>
       <div className='tweet-container'>
         {realTweets.toReversed().map((item) => {

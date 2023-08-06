@@ -50,7 +50,7 @@ const QuickTweet = ()=> {
             </a>
           </section>
           <button className='quick-tweet-btn' onClick={handlePost}>
-            Tweet
+            Post
           </button>
         </div>
       </div>

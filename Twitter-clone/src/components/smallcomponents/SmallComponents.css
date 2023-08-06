@@ -343,3 +343,61 @@
     opacity: 0;
   }
 }
+.error-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: arial;
+  background-color: rgba(0, 0, 0, 0.171);
+  position: fixed;
+  top:0;
+  z-index: 100;
+}
+.error-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:300px;
+  height: 300px;
+  box-shadow: 0 0 5px var(--twitter-extra-light-gray);
+  border-radius: 35px;
+  padding-inline: 30px;
+  background-color: white;
+}
+.error-content{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+}
+.error-content>h3{
+  width: 100%;
+  text-align: left;
+
+}
+.error-content img{
+  width:30px;
+  height: 30px;
+}
+.return{
+  width:100%;
+  background-color: black;
+  color:white;
+  font-size: 12pt;
+  font-weight: 700;
+  border-radius: 30px;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:pointer;
+}
+.return:hover{
+  color:white;
+ 
+   background-color: var(--twitter-black);
+}

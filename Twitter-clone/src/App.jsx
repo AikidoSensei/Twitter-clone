@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import SideBar from './components/SideBar/SideBar'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -25,13 +25,16 @@ import { mockData } from './features/MockUserSlice'
 
 import DeleteTweet from './components/Popups/DeleteTweet'
 import DeleteReply from './components/Popups/DeleteReply'
+import Welcome from './components/Welcome/Welcome'
+import Error from './components/Error/Error'
+import ErrorOccured from './components/smallcomponents/ErrorOccured'
+import UserError from './components/smallcomponents/UserError'
 
 const App = () => {
-
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(mockData())
-  },[])
+  }, [])
 
   const {
     tweet,
@@ -42,35 +45,40 @@ const App = () => {
     confirmDelete,
     confirmDeleteReply,
     deleteId,
+    errorOccured,
+    mockUserError
   } = useSelector((store) => store.popup)
 
   return (
     <main className='homepage-layout'>
       <BrowserRouter>
-        {MobileSideBar && <MobileSideBar/>}
+        {MobileSideBar && <MobileSideBar />}
         {tweet && <Tweet />}
         {verified && <Verified />}
-        {confirmDelete && <DeleteTweet id={deleteId}/>}
+        {confirmDelete && <DeleteTweet id={deleteId} />}
         {confirmDeleteReply && <DeleteReply />}
+        {errorOccured && <ErrorOccured />}
+        {mockUserError && <UserError/>}
         <Routes>
-          <Route element={<ProtectedRoutes/>}>
-          <Route path='/' element={<SharedComponent />} >
-          <Route path='home' index element={<HomeCenter />} />
-          <Route path='profile' element={<MyProfile />} />
-          <Route path='explore' element={<Explore />} />
-          <Route path='notifications' element={<Notifications />} />
-          <Route path='lists' element={<Lists />} />
-          <Route path='bookmarks' element={<BookMarks />} />
-          <Route path='messages' element={<Messages />} />
-          <Route path='tweet/:id' element={<SingleTweet/>} />
-          <Route path='tweet/' element={<SingleTweet/>} />
-          <Route path='user/:id' element={<UserProfile/>} />
+          <Route element={<ProtectedRoutes />}>
+            <Route path='/' element={<SharedComponent />}>
+              <Route path='/' index element={<HomeCenter />} />
+              <Route path='home' element={<HomeCenter />} />
+              <Route path='profile' element={<MyProfile />} />
+              <Route path='explore' element={<Explore />} />
+              <Route path='notifications' element={<Notifications />} />
+              <Route path='lists' element={<Lists />} />
+              <Route path='bookmarks' element={<BookMarks />} />
+              <Route path='messages' element={<Messages />} />
+              <Route path='tweet/:id' element={<SingleTweet />} />
+              <Route path='user/:id' element={<UserProfile />} />
+              {/* <Route path='*' element={<Error />} /> */}
+            </Route>
           </Route>
-          </Route>
-          <Route path='login' element={<Login/>} />
-          <Route path='signup' element={<SignUp/>} />
+          <Route path='login' element={<Login />} />
+          <Route path='welcome' element={<Welcome />} />
+          <Route path='signup' element={<SignUp />} />
         </Routes>
-
       </BrowserRouter>
     </main>
   )

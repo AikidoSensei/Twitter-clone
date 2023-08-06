@@ -3,8 +3,6 @@ import './SideBar.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import icon from '../../assets/icon.png'
 import niolabrown from '../../assets/niolabrown.jpg'
-import Verified from '../Popups/Verified'
-import Tweet from '../Popups/Tweet'
 import { useSelector, useDispatch } from 'react-redux'
 import {
   handleTweet,
@@ -13,25 +11,13 @@ import {
   handleMore,
   clearAll,
 } from '../../features/PopupSlice'
-import MobileNavBar from '../smallcomponents/MobileNavBar'
 import { logout } from '../../features/LoginSlice'
 const SideBar = () => {
   const { tweet, showLogout, more, verified } = useSelector(
     (store) => store.popup
   )
   const { user } = useSelector((state) => state.loginUser)
-  // const {
-  //   userId,
-  //   name,
-  //   username,
-  //   bio,
-  //   location,
-  //   tweets,
-  //   joined,
-  //   followers,
-  //   following,
-  // } = user
-  // const log = user?.name
+
   const dispatch = useDispatch()
   const navigate = useNavigate()
   window.addEventListener('click', () => {
@@ -40,8 +26,6 @@ const SideBar = () => {
   const handleLogout = (e)=>{
     e.stopPropagation();
     dispatch(logout())
-    // navigate('/login')
-
   }
   return (
     <section className='sidebar-wrapper'>
@@ -140,7 +124,7 @@ const SideBar = () => {
           }}
         >
           <i className='fa-solid fa-feather' />
-          <p>Tweet</p>
+          <p>Post</p>
         </a>
         {more && (
           <div className='more-container' onClick={(e) => e.stopPropagation()}>

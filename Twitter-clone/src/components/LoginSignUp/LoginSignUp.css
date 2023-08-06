@@ -68,7 +68,6 @@ color: var(--twitter-primaryfont);
  height:30px;
  background-color: var(--twitter-extra-light-gray);
  color: black;
- /* border:solid 1px var(--twitter-extra-light-gray); */
  font-family: 'Poppins';
  border-radius: 20px;
  font-size: clamp(6pt, 2.5vw, 8pt);

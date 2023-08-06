@@ -1,0 +1,236 @@
+.welcome-wrapper{
+ width:100vw;
+ height: 100vh;
+ background-color: white;
+}
+.left-wallpaper{
+ width:55%;
+ background-color: white;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+}
+.left-wallpaper>img{
+ width:40%
+}
+.welcome-content{
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ width:45%;
+ line-height: 0px;
+ padding-top: 90px;
+}
+.welcome-container{
+ display:flex;
+ width:100%;
+}
+.welcome-inner-content{
+ display:flex;
+ align-items: center;
+ justify-content: start;
+ flex-direction: column;
+ gap: 0.5rem;
+ transition: 0.5s;
+ text-align: center;
+}
+.welcome-logo{
+ width:100%;
+ height: 50px;
+ display: none;
+}
+.welcome-logo>img{
+ width:50px;
+ height: 50px;
+}
+.welcome-inner-content>h1{
+ font-size: 50pt;
+ font-family: 'Segoe UI';
+ font-weight: 700;
+ text-align: left;
+ width:100%;
+}
+.welcome-inner-content>h2{
+ text-align: left;
+ width: 100%;
+ font-family: 'Segoe UI';
+ font-size: clamp(15pt, 2.5vw, 25pt);
+ background-color: blue
+}
+.welcome-buttons-container{
+ width: 100%;
+}
+.welcome-buttons{
+ width: 55%;
+ display: flex;
+ flex-direction: column;
+ justify-content: start;
+}
+.terms-conditions{
+ font-size: 8pt;
+ text-align: left;
+ font-family: arial;
+ color: var(--twitter-primaryfont);
+ line-height: normal;
+}
+.terms-conditions span{
+ color:var(--twitter-blue)
+}
+.google-welcome{
+ width:100%;
+ height:35px;
+ color: var(--twitter-primaryfont);
+ border:solid 1px var(--twitter-extra-light-gray);
+ font-family: 'Poppins';
+ font-size: 10pt;
+ border-radius: 20px;
+ font-size: clamp(6pt, 2.5vw, 8pt);
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 10px;
+ cursor:pointer;
+}
+.google-welcome>p{
+ margin-left: 10px;
+}
+.google-welcome:hover{
+ color: var(--twitter-primaryfont);
+ background-color: var(--twitter-lighter-blue);
+}
+.google-welcome img{
+ width:20px;
+ height:20px;
+ margin-right: 5px;
+}
+.apple-welcome{
+ width:100%;
+ height:35px;
+ border:solid 1px var(--twitter-extra-light-gray);
+ color: black;
+ font-family: 'Poppins';
+ border-radius: 20px;
+ font-size: clamp(10pt, 2.5vw, 12pt);
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 10px;
+ cursor:pointer;
+ font-weight: 700;
+ font-size: 10pt;
+}
+.apple-welcome>i{
+ margin-right: 10px;
+}
+.apple-welcome:hover{
+ color: var(--twitter-primaryfont);
+}
+.apple-welcome:hover{
+ background-color:var(--twitter-extra-light-gray)
+}
+.welcome-create{
+ width:100%;
+ height:35px;
+ background-color: var(--twitter-blue);
+ color: white;
+ font-family: 'Poppins';
+ border-radius: 20px;
+ font-size: clamp(6pt, 2.5vw, 10pt);
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 15px;
+ cursor:pointer;
+ font-weight: 700;
+}
+.welcome-create:hover{
+ color: white;
+}
+.welcome-signin{
+ margin-top: 50px;
+}
+.welcome-signin>h4{
+ color:var(--twitter-black);
+ width: 100%;
+ text-align: left;
+ font-family: arial;
+}
+.welcome-login{
+ width:100%;
+ height:35px;
+ background-color: white;
+ color: var(--twitter-blue);
+ font-family: 'Poppins';
+ border-radius: 20px;
+ font-size: clamp(6pt, 2.5vw, 10pt);
+ border:solid 1px var(--twitter-extra-light-gray);
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 25px;
+ cursor:pointer;
+ font-weight: 700;
+ margin-top: 10px;
+ margin-bottom: 30px;
+}
+.welcome-login:hover{
+ background-color: var(--twitter-lighter-blue);
+ color:var(--twitter-blue)
+}
+footer{
+ margin-top: 100px;
+ text-align: center;
+ line-height: 5px;
+ font-size: 9pt;
+ color: var(--twitter-primaryfont);
+ height: 40px;
+ font-family: arial;
+}
+footer :first-child{
+ cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+ .welcome-wrapper{
+  height: 100vh;
+  display: block;
+ }
+ .welcome-container{
+  width: 100%;
+ }
+ .welcome-content{
+  width: 100%;
+  padding-top: 20px;
+ }
+ .left-wallpaper{
+  display:none;
+ }
+ .welcome-logo{
+  display:flex;
+  width:80%
+ }
+.welcome-buttons-container{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+.welcome-buttons{
+ width: 80%;
+ display: flex;
+ justify-content: center;
+ gap:1rem;
+}
+.google-welcome{
+ font-size: 10pt;
+}
+.welcome-inner-content>h1{
+ width:80%;
+ font-size: 40pt;
+}
+.welcome-inner-content>h2{
+ width: 80%;
+}
+.apple-welcome, .google-welcome, .welcome-create, .welcome-login{
+ height: 40px;
+}
+}

@@ -69,7 +69,7 @@ const Tweet = () => {
               </div>
               <button className='quick-tweet-btn'
               onClick={handlePost}
-              >Tweet</button>
+              >Post</button>
             </div>
           </div>
         </div>

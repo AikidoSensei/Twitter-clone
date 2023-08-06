@@ -441,7 +441,6 @@ const retweetReply = async (req, res)=>{
 
     const retweeted = reply.retweets.push(userId)
     await reply.save()
-
     console.log(reply.retweets.length)
     res.status(StatusCodes.CREATED).json(reply)
   } catch (error) {
@@ -450,7 +449,7 @@ const retweetReply = async (req, res)=>{
       .status(StatusCodes.INTERNAL_SERVER_ERROR)
       .json({ msg: 'something went wrong please try again later' })
   }
-}
+} 
 const unretweetReply = async (req, res)=>{
   try {
     const userId = req.user.userId

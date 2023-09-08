@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import niolabrown from '../../assets/niolabrown.jpg'
+import defaultAvatar from '../../assets/default.webp'
 import './Notifications.css'
 import '../smallcomponents/SmallComponents.css'
 import { useDispatch } from 'react-redux'
@@ -14,7 +14,7 @@ const Notifications = () => {
         <div className='top-blur'>
           <h2>Notifications</h2>
           <img
-            src={niolabrown}
+            src={defaultAvatar}
             className='mobile-avatar'
             alt='mobile-avatar'
             onClick={(e) => {

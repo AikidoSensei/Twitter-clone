@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import niolabrown from '../../assets/niolabrown.jpg'
+
 import defaultAvatar from '../../assets/default.webp'
 import './Post.css'
 import { Link } from 'react-router-dom'

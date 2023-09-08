@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import BackBtn from '../smallcomponents/BackBtn'
 import './MyProfile.css'
+import defaultAvatar from '../../assets/default.webp'
 import banner from '../../assets/tasty-hero-wallpaper.jpg'
 import niolabrown from '../../assets/niolabrown.jpg'
 import Post from '../Center/Post'
@@ -27,7 +28,7 @@ const MyProfile = () => {
           <div className='profile-media'>
             <img src={banner} className='banner' alt='banner' />
             <img
-              src={niolabrown}
+              src={user.avatar ? avatar : defaultAvatar}
               className='profile-avatar'
               alt='profile-avatar'
             />
@@ -43,7 +44,6 @@ const MyProfile = () => {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
               excepturi.
-            
             </p>
             <div className='location-joined'>
               <span>

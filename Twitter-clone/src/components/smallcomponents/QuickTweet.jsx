@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './SmallComponents.css'
-import niolabrown from '../../assets/niolabrown.jpg'
+import defaultAvatar from '../../assets/default.webp'
 import axiosDispatch from '../../axios/globals'
 import { useSelector, useDispatch } from 'react-redux'
 import { usePostTweetMutation } from '../../features/ApiSlice'
@@ -20,7 +20,7 @@ const QuickTweet = ()=> {
     <main className='quick-tweet-wrapper'>
       <div className='tweet-container'>
         <div className='avatar-text'>
-          <img src={niolabrown} alt='avatar' className='avatar' />
+          <img src={defaultAvatar} alt='avatar' className='avatar' />
           <textarea
             value={tweet}
             onChange={(e) => setTweet(e.target.value)}

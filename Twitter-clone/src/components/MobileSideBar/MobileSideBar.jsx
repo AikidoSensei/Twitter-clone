@@ -1,16 +1,18 @@
 import React from 'react'
 import './MobileSideBar.css'
 import CancelBtn from '../smallcomponents/CancelBtn'
-import niolabrown from '../../assets/niolabrown.jpg'
+import defaultAvatar from '../../assets/default.webp'
 import {useSelector, useDispatch} from 'react-redux'
 import { handleMobile } from '../../features/PopupSlice'
 import { NavLink } from 'react-router-dom'
 import { logout } from '../../features/LoginSlice'
 import {handleVerified} from '../../features/PopupSlice'
+import { useGetMyProfileQuery } from '../../features/ApiSlice'
 const MobileSideBar = () => {
+   const { data: user, isLoading, error } = useGetMyProfileQuery()
 const {mobileSideBar} = useSelector(store=>store.popup)
 
-const { myProfilePage } = useSelector((state) => state.loginUser)
+
 const dispatch = useDispatch();
 
  const handleLogout = (e) => {
@@ -30,22 +32,22 @@ const dispatch = useDispatch();
           <h2>Account Info</h2>
           <CancelBtn />
         </div>
-        <img src={niolabrown} className='post__avatar' alt='profile-img' />
+        <img src={defaultAvatar} className='post__avatar' alt='profile-img' />
         <div className='msb-body profile-body'>
           <div className='msb-handle twitter-handle'>
             <h3>
-              {myProfilePage?.name} {'  '}
+              {user?.name}
               <i className='fa-solid fa-circle-check verified' />
             </h3>
-            <p>@{myProfilePage?.username}</p>
+            <p>@{user?.username}</p>
           </div>
           <div className='msb-followers profile-followers'>
             <span>
-              {myProfilePage?.following?.length}
+              {user?.following?.length}
               <span>Following</span>
             </span>
             <span>
-              {myProfilePage?.followers?.length}
+              {user?.followers?.length}
               <span>Followers</span>
             </span>
           </div>
@@ -63,9 +65,7 @@ const dispatch = useDispatch();
               Home
             </span>
           </NavLink>
-          <a onClick={
-            ()=>dispatch(handleVerified())
-          } >
+          <a onClick={() => dispatch(handleVerified())}>
             <span>
               <i className='fab fa-twitter-square twitter-blue' />
               Verified

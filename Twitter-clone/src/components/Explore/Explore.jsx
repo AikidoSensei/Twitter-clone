@@ -2,7 +2,7 @@ import React from 'react'
 import twitterX from '../../assets/icon.png'
 import './Explore.css'
 
-import niolabrown from '../../assets/niolabrown.jpg'
+import defaultAvatar from '../../assets/default.webp'
 import Loading from '../smallcomponents/Loading'
 import MobileNavBar from '../smallcomponents/MobileNavBar'
 import { useDispatch } from 'react-redux'
@@ -25,7 +25,7 @@ const Explore = () => {
       <div className='profile-blur'>
         <div className='avatar-container'>
           <img
-            src={niolabrown}
+            src={defaultAvatar}
             className='mobile-avatar'
             alt='mobile-avatar'
             onClick={(e) => {

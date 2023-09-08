@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../smallcomponents/SmallComponents.css'
 import icon from '../../assets/icon.png'
-import niolabrown from '../../assets/niolabrown.jpg'
+import defaultAvatar from '../../assets/default.webp'
 import { useDispatch } from 'react-redux'
 import { handleMobile } from '../../features/PopupSlice'
 const Blur = () => {
@@ -26,7 +26,7 @@ const Blur = () => {
       <div className='top-blur'>
         <h2>Home</h2>
         <img
-          src={niolabrown}
+          src={defaultAvatar}
           className='mobile-avatar'
           alt='mobile-avatar'
           onClick={(e) => {

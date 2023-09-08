@@ -1,5 +1,5 @@
 import React from 'react'
-import niolabrown from '../../assets/niolabrown.jpg'
+import defaultAvatar from '../../assets/default.webp'
 import { useDispatch } from 'react-redux'
 import { handleMobile } from '../../features/PopupSlice'
 const ProfileBlur = () => {
@@ -8,7 +8,7 @@ const ProfileBlur = () => {
     <div className='profile-blur'>
       <div className='avatar-container'>
         <img
-          src={niolabrown}
+          src={defaultAvatar}
           className='mobile-avatar'
           alt='mobile-avatar'
           onClick={(e) => {

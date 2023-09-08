@@ -66,7 +66,9 @@ const Reply = ({ data }) => {
   return (
     <article className='post__container' onClick={() => setShowDelete(false)}>
       <section className='main-post'>
-        <Link className='link-image' to={`/user/${data?.createdBy}`}>
+        <Link className='link-image'  to={
+            data.createdBy === userId ? `/profile` : `/user/${data?.createdBy}`
+          }>
           <img
             src={data.avatar ? avatar : defaultAvatar}
             className='post__avatar'

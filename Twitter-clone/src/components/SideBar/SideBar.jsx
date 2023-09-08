@@ -2,7 +2,7 @@ import React from 'react'
 import './SideBar.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import icon from '../../assets/icon.png'
-import niolabrown from '../../assets/niolabrown.jpg'
+import defaultImg from '../../assets/default.webp'
 import { useSelector, useDispatch } from 'react-redux'
 import {
   handleTweet,
@@ -156,7 +156,7 @@ const SideBar = () => {
 
             }}
           >
-            <img src={niolabrown} className='profile-img' alt='profile-img' />
+            <img src={defaultImg} className='profile-img' alt='profile-img' />
             <div className='sbp-handle'>
               <h3>{user?.name}</h3>
               <p>@{user?.username}</p>

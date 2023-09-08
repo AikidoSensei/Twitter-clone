@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import x from '../../assets/x-wallpaper.svg'
 import { Link } from 'react-router-dom'
 import icon from '../../assets/icon.png'
@@ -6,6 +6,14 @@ import google from '../../assets/google.png'
 import '../LoginSignUp/LoginSignUp.css'
 import './Welcome.css'
 const Welcome = () => {
+  const [unavailable, setUnavailable] = useState(false)
+  const [appleunavailable, setAppleUnavailable] = useState(false)
+  useEffect(()=>{
+    setUnavailable(false)
+  },[])
+  useEffect(()=>{
+    setAppleUnavailable(false)
+  },[])
   return (
     <>
       <div className='welcome-wrapper'>
@@ -23,16 +31,30 @@ const Welcome = () => {
                 <h2>Join today.</h2>
                 <div className='welcome-buttons-container'>
                   <div className='welcome-buttons'>
-                    <a className='google-welcome'>
-                      <p>sign in with google</p>
+                    <a
+                      className='google-welcome'
+                      onClick={() => setUnavailable(true)}
+                    >
+                      {unavailable ? (
+                        <p>currently unavailable sign in instead</p>
+                      ) : (
+                        <p>sign in with google</p>
+                      )}
                       <img src={google} alt='google' />
                     </a>
-                    <a className='apple-welcome'>
+                    <a
+                      className='apple-welcome'
+                      onClick={() => setAppleUnavailable(true)}
+                    >
                       <i
                         className='fa-brands fa-apple'
                         style={{ color: '#000000' }}
                       ></i>
-                      <p>Sign in with Apple</p>
+                      {appleunavailable ? (
+                        <p>currently unavailable sign in instead</p>
+                      ) : (
+                        <p>sign in with Apple</p>
+                      )}
                     </a>
                     <div className='login-line'>
                       <p>or</p>
@@ -60,7 +82,7 @@ const Welcome = () => {
           </div>
         </div>
         <footer>
-          <p>About this project & about me</p>
+          <p>about this project & about me</p>
           <p> &#169; 2023 Z Corp. </p>
         </footer>
       </div>

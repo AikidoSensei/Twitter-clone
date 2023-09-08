@@ -3,11 +3,12 @@ const token = localStorage.getItem('usertoken')
 
 
 const axiosDispatch = axios.create({
-  baseURL: 'http://localhost:3000/twitter/clone/main/',
-  headers:{
-   Accept: 'application/json',
-   Authorization: `Bearer ${token}`
-  }
+  baseURL:
+    'https://twitter-clone-backend-8aw8.onrender.com/twitter/clone/main/',
+  headers: {
+    Accept: 'application/json',
+    Authorization: `Bearer ${token}`,
+  },
 })
 
 export default axiosDispatch

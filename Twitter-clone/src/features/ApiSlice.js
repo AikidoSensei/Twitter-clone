@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-const baseURL = 'http://localhost:3000/twitter/clone/main/'
+const baseURL =
+  'https://twitter-clone-backend-8aw8.onrender.com/twitter/clone/main/'
 
 export const apiSlice = createApi({
   reducerPath: 'apiDispatch',

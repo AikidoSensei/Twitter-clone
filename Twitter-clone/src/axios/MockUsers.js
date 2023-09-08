@@ -1,5 +1,6 @@
 import axios from 'axios'
-const url = 'http://localhost:3000/twitter/clone/main/'
+const url =
+  'https://twitter-clone-backend-8aw8.onrender.com/twitter/clone/main/'
 import axiosDispatch from './globals'
 const mockUser = axios.create({
  baseURL:url

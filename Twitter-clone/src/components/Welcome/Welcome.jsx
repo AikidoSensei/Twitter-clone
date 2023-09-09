@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import x from '../../assets/x-wallpaper.svg'
+import x from '../../assets/X-wallpaper.svg'
 import { Link } from 'react-router-dom'
 import icon from '../../assets/icon.png'
 import google from '../../assets/google.png'

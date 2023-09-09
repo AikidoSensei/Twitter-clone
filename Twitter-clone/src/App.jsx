@@ -32,10 +32,6 @@ import UserError from './components/smallcomponents/UserError'
 
 const App = () => {
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(mockData())
-  }, [])
-
   const {
     tweet,
     showLogout,

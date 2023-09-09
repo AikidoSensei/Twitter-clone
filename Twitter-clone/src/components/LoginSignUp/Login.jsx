@@ -21,7 +21,7 @@ const Login = () => {
     }
   }, [pwd])
   // SIGN IN FUNCTION WITH AXIOS
-  const auth = 'http://localhost:3000/twitter/clone/auth'
+  const auth = 'https://twitter-clone-backend-8aw8.onrender.com/twitter/clone/auth'
   const login = axios.create({
       baseURL: auth,
     })
